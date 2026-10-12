@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+.agents/
+.codex/
+.impeccable/
+.windsurf/
+.zencoder/
+.impeccable/
+.claude/
+
+
+
+
+skills-lock.json
