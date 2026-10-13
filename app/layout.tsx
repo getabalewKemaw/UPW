@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const lexend = Lexend({
@@ -19,9 +20,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${lexend.variable} ${lexend.className} h-full antialiased`}>
-      <head>
-        <script
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+      className={`${lexend.variable} ${lexend.className} h-full antialiased`}
+    >
+      <head />
+      <body className={`${lexend.className} min-h-full flex flex-col font-sans text-theme-primary bg-theme-page`}>
+        <Script
+          id="theme-initializer"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -41,10 +50,9 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className={`${lexend.className} min-h-full flex flex-col font-sans text-theme-primary bg-theme-page`}>
         {children}
       </body>
     </html>
   );
 }
+

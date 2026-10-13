@@ -12,7 +12,9 @@ class SoundManager {
         const stored = localStorage.getItem("gk_sound_enabled");
         // Default to enabled (true) or user's stored preference
         this.soundEnabled = stored === null ? true : stored === "true";
-      } catch (_) {}
+      } catch {
+        // storage unavailable
+      }
     }
   }
 
@@ -43,7 +45,9 @@ class SoundManager {
     this.soundEnabled = enabled;
     try {
       localStorage.setItem("gk_sound_enabled", enabled ? "true" : "false");
-    } catch (_) {}
+    } catch {
+      // storage unavailable
+    }
 
     if (enabled) {
       this.playAffirm();
@@ -165,8 +169,9 @@ class SoundManager {
     osc.stop(now + 0.09);
   }
 
-  // Affirmation chime on unmuting
-  private playAffirm(): void {
+  // Affirmation chime on unmuting or interactive emphasis
+  public playAffirm(): void {
+    if (!this.soundEnabled) return;
     const ctx = this.getContext();
     if (!ctx) return;
 
