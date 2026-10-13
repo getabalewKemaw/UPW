@@ -1,0 +1,23 @@
+import type { Metadata } from "next";
+import { HatchPerimeter } from "@/components/frame/HatchPerimeter";
+import { ServicesPageView } from "@/components/services/ServicesPageView";
+import { FooterSection } from "@/components/footer/FooterSection";
+
+export const metadata: Metadata = {
+  title: "Engineering Services & Advisory · Getabalew Kemaw",
+  description:
+    "Custom software development, business automation, mobile application development, development mentorship, and technical talk appointment booking with Getabalew Kemaw.",
+};
+
+export default function ServicesPage() {
+  return (
+    <HatchPerimeter showPreloader={false}>
+      <main className="flex-1 w-full bg-theme-main flex flex-col justify-center px-6 sm:px-10 md:px-12 lg:px-16 pt-24 sm:pt-28 pb-16 sm:pb-20 md:pb-24">
+        <div className="w-full flex flex-col gap-14">
+          <ServicesPageView />
+          <FooterSection />
+        </div>
+      </main>
+    </HatchPerimeter>
+  );
+}
