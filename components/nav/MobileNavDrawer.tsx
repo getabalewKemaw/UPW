@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { NAV_ITEMS } from "@/data/nav-data";
 import { ArrowUpRight } from "lucide-react";
+import { sound } from "@/utils/sound";
 
 interface MobileNavDrawerProps {
   isOpen: boolean;
@@ -61,6 +62,7 @@ export function MobileNavDrawer({
             key={item.id}
             href={item.href}
             onClick={() => {
+              sound.playClick();
               onSelect(item.id);
               onClose();
             }}

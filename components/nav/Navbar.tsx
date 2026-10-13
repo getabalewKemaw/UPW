@@ -5,6 +5,8 @@ import { NavBrand } from "./NavBrand";
 import { NavLinks } from "./NavLinks";
 import { MobileNavDrawer } from "./MobileNavDrawer";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { SoundToggle } from "@/components/theme/SoundToggle";
+import { sound } from "@/utils/sound";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -63,10 +65,18 @@ export function Navbar() {
           <ThemeToggle inline={true} />
         </div>
 
+        {/* Audio Mute / Unmute Toggle */}
+        <div className="shrink-0 pl-0.5">
+          <SoundToggle />
+        </div>
+
         {/* Mobile Hamburger Button with Smooth Morphing Animation (Mobile Only) */}
         <button
           type="button"
-          onClick={() => setMobileOpen((prev) => !prev)}
+          onClick={() => {
+            sound.playClick();
+            setMobileOpen((prev) => !prev);
+          }}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
           className="md:hidden relative w-9 h-9 sm:w-10 sm:h-10 flex flex-col items-center justify-center gap-1.5 rounded-full hover:bg-theme-btn-secondary-hover transition-colors cursor-pointer select-none"

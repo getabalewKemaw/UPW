@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import { sound } from "@/utils/sound";
 
 interface PreloaderProps {
   onComplete?: () => void;
@@ -35,6 +36,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
   const [progress, setProgress] = useState(0);
 
   const dismiss = useCallback(() => {
+    sound.playClick();
     setIsExiting(true);
     setTimeout(() => {
       setIsFinished(true);

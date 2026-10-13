@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { NAV_ITEMS } from "@/data/nav-data";
+import { sound } from "@/utils/sound";
 
 interface NavLinksProps {
   activeId?: string;
@@ -66,6 +67,7 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
   }, [propActiveId]);
 
   const handleLinkClick = (id: string) => {
+    sound.playClick();
     setInternalActiveId(id);
     onSelect?.(id);
   };

@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Download, Check } from "lucide-react";
-import { CONTACT_EMAIL } from "@/data/portfolio-data";
+import { CONTACT_EMAIL, RESUME_URL } from "@/data/portfolio-data";
+import { sound } from "@/utils/sound";
 
 export function ActionButtons() {
   const [copiedEmail, setCopiedEmail] = useState<boolean>(false);
@@ -10,6 +11,7 @@ export function ActionButtons() {
   const handleCopyEmail = (e: React.MouseEvent) => {
     e.preventDefault();
     navigator.clipboard.writeText(CONTACT_EMAIL);
+    sound.playCopy();
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
@@ -17,9 +19,12 @@ export function ActionButtons() {
   return (
     <div className="flex flex-wrap items-center gap-4 pt-4 theme-level-6">
       <a
-        href="#resume"
+        href={RESUME_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => sound.playClick()}
         style={{ transitionDelay: "0ms" }}
-        className="inline-flex items-center gap-2.5 bg-theme-btn-primary text-theme-btn-primary px-6 py-3 rounded-[5px] text-base sm:text-lg md:text-xl font-normal hover:opacity-90 active:opacity-100 transition-all cursor-pointer theme-level-6"
+        className="inline-flex items-center gap-2.5 bg-theme-btn-primary text-theme-btn-primary px-6 py-3 rounded-[5px] text-base sm:text-lg md:text-xl font-normal hover:opacity-90 active:scale-95 transition-all cursor-pointer theme-level-6"
       >
         <Download className="w-5 h-5" />
         <span>Download resume</span>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
 import { InteractiveMentionProps } from "@/types/portfolio";
+import { sound } from "@/utils/sound";
 
 // Interactive mention with selection corner handles ("border holes"), connector line, and square copy button
 export function InteractiveMention({
@@ -18,6 +19,7 @@ export function InteractiveMention({
     e.preventDefault();
     e.stopPropagation();
     navigator.clipboard.writeText(href);
+    sound.playCopy();
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };

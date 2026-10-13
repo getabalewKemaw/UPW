@@ -2,9 +2,15 @@
 
 import { useState } from "react";
 import { TOPIC_CHIPS } from "@/data/portfolio-data";
+import { sound } from "@/utils/sound";
 
 export function TopicChips() {
   const [activeChip, setActiveChip] = useState<string | null>(null);
+
+  const handleChipClick = (id: string) => {
+    sound.playSelect();
+    setActiveChip(activeChip === id ? null : id);
+  };
 
   return (
     <div className="leading-loose flex flex-wrap items-center gap-x-2.5 gap-y-3">
@@ -14,7 +20,7 @@ export function TopicChips() {
         <button
           key={chip.id}
           type="button"
-          onClick={() => setActiveChip(activeChip === chip.id ? null : chip.id)}
+          onClick={() => handleChipClick(chip.id)}
           style={{ transitionDelay: `${index * 35}ms` }}
           className={`inline-block px-4 py-1.5 rounded-[4px] text-lg sm:text-xl md:text-2xl font-light transition-all duration-300 cursor-pointer theme-level-4 ${
             activeChip === chip.id

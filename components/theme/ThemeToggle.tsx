@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
+import { sound } from "@/utils/sound";
 
 interface ThemeToggleProps {
   inline?: boolean;
@@ -21,6 +22,7 @@ export function ThemeToggle({ inline = false }: ThemeToggleProps) {
 
   const handleSetTheme = (newTheme: "light" | "dark", e?: React.MouseEvent) => {
     if (newTheme === theme && mounted) return;
+    sound.playTheme(newTheme === "dark");
     setTheme(newTheme);
     try {
       localStorage.setItem("theme", newTheme);

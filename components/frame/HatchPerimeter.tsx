@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar } from "@/components/nav/Navbar";
 import { Preloader } from "@/components/preloader/Preloader";
+import { ClickSpark } from "@/components/effects/ClickSpark";
 
 interface HatchPerimeterProps {
   children: React.ReactNode;
@@ -9,6 +10,9 @@ interface HatchPerimeterProps {
 export function HatchPerimeter({ children }: HatchPerimeterProps) {
   return (
     <div className="relative min-h-screen w-full flex flex-col bg-theme-page text-theme-primary selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
+      {/* Tactile Micro-Point UI Click Sparks & Haptic Sound */}
+      <ClickSpark />
+
       {/* High-Performance Marketing Preloader */}
       <Preloader />
 

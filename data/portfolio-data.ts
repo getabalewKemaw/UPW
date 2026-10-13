@@ -26,6 +26,8 @@ export const COLOR_PATTERN = `repeating-linear-gradient(
 
 export const CONTACT_EMAIL = "getabalewkemaw@gmail.com";
 
+export const RESUME_URL = "https://drive.google.com/file/d/1PxyLQlpbbmK0rnVL7Tz46qsdtZqKOtUR/view?usp=sharing";
+
 export const TIMEZONE = "Africa/Addis_Ababa";
 
 export const TOPIC_CHIPS: TopicChipItem[] = [
