@@ -3,53 +3,319 @@
 :root {
   --background: #ffffff;
   --foreground: #363635;
+  --bg-page: #ffffff;
+  --bg-main: #ffffff;
+  --bg-band: #ffffff;
+  --text-primary: #363635;
   --text-muted: #5e5e5d;
-  --border: #c3c3c2;
-  --surface: #ffffff;
-  --surface-subtle: #fbfbfb;
-  --chip-bg: rgba(54, 54, 53, 0.06);
+  --text-narrative: #4a4a49;
+  --border-color: #c3c3c2;
+  --border-avatar: #363635;
+  --avatar-bg: #f3f4f1;
+  --chip-bg: #f0f0ef;
+  --chip-hover: #e6e6e5;
   --chip-text: #363635;
-  --primary-btn-bg: #363635;
-  --primary-btn-text: #ffffff;
-  --radius-default: 3px;
-  --radius-md: 5px;
+  --chip-active-bg: #363635;
+  --chip-active-text: #ffffff;
+  --chip-highlight-bg: #363635;
+  --chip-highlight-text: #ffffff;
+  --btn-primary-bg: #363635;
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-text: #363635;
+  --btn-secondary-hover: rgba(54, 54, 53, 0.08);
+  --btn-tertiary-text: #5e5e5d;
+  --popover-bg: #ffffff;
+  --popover-border: #c3c3c2;
+  --popover-text: #363635;
+  --popover-subtext: #5e5e5d;
+  --popover-copy-bg: #f9fbf6;
+  --popover-copy-hover: #efefef;
+  --status-bg: #ffffff;
+  --status-border: #c3c3c2;
+  --status-text: #5e5e5d;
+  --status-bold: #363635;
+  --mention-underline: #c3c3c2;
+  --mention-underline-hover: #363635;
+  --mention-handle-border: #363635;
+  --mention-handle-bg: #ffffff;
+  --mention-wire: #363635;
+  --grain-opacity: 0.3;
+  --grain-filter: none;
+  --selection-bg: #efefef;
+  --selection-text: #363635;
+  --hatch-gradient: repeating-linear-gradient(
+    -45deg,
+    #363635 0px,
+    #363635 2.5px,
+    transparent 2.5px,
+    transparent 5px,
+    #f97316 5px,
+    #f97316 7.5px,
+    transparent 7.5px,
+    transparent 10px,
+    #06b6d4 10px,
+    #06b6d4 12.5px,
+    transparent 12.5px,
+    transparent 15px,
+    #6366f1 15px,
+    #6366f1 17.5px,
+    transparent 17.5px,
+    transparent 20px,
+    #10b981 20px,
+    #10b981 22.5px,
+    transparent 22.5px,
+    transparent 25px
+  );
+  --hatch-text-gradient: repeating-linear-gradient(
+    -45deg,
+    #363635 0px 6px,
+    #f97316 6px 12px,
+    #06b6d4 12px 18px,
+    #6366f1 18px 24px,
+    #10b981 24px 30px
+  );
+  --nav-hover-pill: rgba(54, 54, 53, 0.08);
+  --nav-hover-border: rgba(54, 54, 53, 0.16);
+  --nav-active-pill: rgba(54, 54, 53, 0.12);
+  --nav-active-border: rgba(54, 54, 53, 0.22);
+}
+
+.dark,
+[data-theme="dark"] {
+  --background: #0d0e0d;
+  --foreground: #ededeb;
+  --bg-page: #0d0e0d;
+  --bg-main: #0d0e0d;
+  --bg-band: #0d0e0d;
+  --text-primary: #ededeb;
+  --text-muted: #9e9e9a;
+  --text-narrative: #c4c4c2;
+  --border-color: #2e2e2d;
+  --border-avatar: #3a3a39;
+  --avatar-bg: #1a1a19;
+  --chip-bg: #20201f;
+  --chip-hover: #2a2a29;
+  --chip-text: #ededeb;
+  --chip-active-bg: #ededeb;
+  --chip-active-text: #0d0e0d;
+  --chip-highlight-bg: #ededeb;
+  --chip-highlight-text: #0d0e0d;
+  --btn-primary-bg: #ededeb;
+  --btn-primary-text: #0d0e0d;
+  --btn-secondary-bg: #181817;
+  --btn-secondary-text: #ededeb;
+  --btn-secondary-hover: rgba(237, 237, 235, 0.1);
+  --btn-tertiary-text: #9e9e9a;
+  --popover-bg: #181817;
+  --popover-border: #2e2e2d;
+  --popover-text: #ededeb;
+  --popover-subtext: #9e9e9a;
+  --popover-copy-bg: #222221;
+  --popover-copy-hover: #2c2c2b;
+  --status-bg: #181817;
+  --status-border: #2e2e2d;
+  --status-text: #9e9e9a;
+  --status-bold: #ededeb;
+  --mention-underline: #4a4a48;
+  --mention-underline-hover: #ededeb;
+  --mention-handle-border: #ededeb;
+  --mention-handle-bg: #181817;
+  --mention-wire: #ededeb;
+  --grain-opacity: 0.12;
+  --grain-filter: invert(1);
+  --selection-bg: #2e2e2d;
+  --selection-text: #ededeb;
+  --hatch-gradient: repeating-linear-gradient(
+    -45deg,
+    #ededeb 0px,
+    #ededeb 2.5px,
+    transparent 2.5px,
+    transparent 5px,
+    #f97316 5px,
+    #f97316 7.5px,
+    transparent 7.5px,
+    transparent 10px,
+    #06b6d4 10px,
+    #06b6d4 12.5px,
+    transparent 12.5px,
+    transparent 15px,
+    #6366f1 15px,
+    #6366f1 17.5px,
+    transparent 17.5px,
+    transparent 20px,
+    #10b981 20px,
+    #10b981 22.5px,
+    transparent 22.5px,
+    transparent 25px
+  );
+  --hatch-text-gradient: repeating-linear-gradient(
+    -45deg,
+    #ededeb 0px 6px,
+    #f97316 6px 12px,
+    #06b6d4 12px 18px,
+    #6366f1 18px 24px,
+    #10b981 24px 30px
+  );
+  --nav-hover-pill: rgba(237, 237, 235, 0.12);
+  --nav-hover-border: rgba(237, 237, 235, 0.22);
+  --nav-active-pill: rgba(237, 237, 235, 0.18);
+  --nav-active-border: rgba(237, 237, 235, 0.3);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-muted: var(--text-muted);
-  --color-border: var(--border);
-  --color-surface: var(--surface);
   --font-sans: var(--font-lexend), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-* {
-  border-color: var(--border);
+/* View Transition API styles for smooth expanding circular ripple */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+/* Staggered Level-by-Level & Side-by-Side Transition Classes */
+html.theme-transitioning .theme-level-0 {
+  transition: background-color 420ms cubic-bezier(0.16, 1, 0.3, 1) 0ms,
+              border-color 420ms cubic-bezier(0.16, 1, 0.3, 1) 0ms,
+              color 420ms cubic-bezier(0.16, 1, 0.3, 1) 0ms,
+              fill 420ms cubic-bezier(0.16, 1, 0.3, 1) 0ms,
+              stroke 420ms cubic-bezier(0.16, 1, 0.3, 1) 0ms !important;
+}
+
+html.theme-transitioning .theme-level-1 {
+  transition: background-color 440ms cubic-bezier(0.16, 1, 0.3, 1) 50ms,
+              border-color 440ms cubic-bezier(0.16, 1, 0.3, 1) 50ms,
+              color 440ms cubic-bezier(0.16, 1, 0.3, 1) 50ms,
+              fill 440ms cubic-bezier(0.16, 1, 0.3, 1) 50ms,
+              stroke 440ms cubic-bezier(0.16, 1, 0.3, 1) 50ms !important;
+}
+
+html.theme-transitioning .theme-level-2 {
+  transition: background-color 460ms cubic-bezier(0.16, 1, 0.3, 1) 110ms,
+              border-color 460ms cubic-bezier(0.16, 1, 0.3, 1) 110ms,
+              color 460ms cubic-bezier(0.16, 1, 0.3, 1) 110ms,
+              fill 460ms cubic-bezier(0.16, 1, 0.3, 1) 110ms,
+              stroke 460ms cubic-bezier(0.16, 1, 0.3, 1) 110ms !important;
+}
+
+html.theme-transitioning .theme-level-3 {
+  transition: background-color 480ms cubic-bezier(0.16, 1, 0.3, 1) 170ms,
+              border-color 480ms cubic-bezier(0.16, 1, 0.3, 1) 170ms,
+              color 480ms cubic-bezier(0.16, 1, 0.3, 1) 170ms,
+              fill 480ms cubic-bezier(0.16, 1, 0.3, 1) 170ms,
+              stroke 480ms cubic-bezier(0.16, 1, 0.3, 1) 170ms !important;
+}
+
+html.theme-transitioning .theme-level-4 {
+  transition: background-color 500ms cubic-bezier(0.16, 1, 0.3, 1) 230ms,
+              border-color 500ms cubic-bezier(0.16, 1, 0.3, 1) 230ms,
+              color 500ms cubic-bezier(0.16, 1, 0.3, 1) 230ms,
+              fill 500ms cubic-bezier(0.16, 1, 0.3, 1) 230ms,
+              stroke 500ms cubic-bezier(0.16, 1, 0.3, 1) 230ms !important;
+}
+
+html.theme-transitioning .theme-level-5 {
+  transition: background-color 520ms cubic-bezier(0.16, 1, 0.3, 1) 290ms,
+              border-color 520ms cubic-bezier(0.16, 1, 0.3, 1) 290ms,
+              color 520ms cubic-bezier(0.16, 1, 0.3, 1) 290ms,
+              fill 520ms cubic-bezier(0.16, 1, 0.3, 1) 290ms,
+              stroke 520ms cubic-bezier(0.16, 1, 0.3, 1) 290ms !important;
+}
+
+html.theme-transitioning .theme-level-6 {
+  transition: background-color 540ms cubic-bezier(0.16, 1, 0.3, 1) 350ms,
+              border-color 540ms cubic-bezier(0.16, 1, 0.3, 1) 350ms,
+              color 540ms cubic-bezier(0.16, 1, 0.3, 1) 350ms,
+              fill 540ms cubic-bezier(0.16, 1, 0.3, 1) 350ms,
+              stroke 540ms cubic-bezier(0.16, 1, 0.3, 1) 350ms !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark,
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body {
-  background-color: #ffffff;
-  color: var(--foreground);
+  background-color: var(--bg-page);
+  color: var(--text-primary);
   font-family: var(--font-lexend), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Subtle background grain layer (controlled opacity so it does not show fully) */
+/* Utility classes bound to CSS variables */
+.bg-theme-page { background-color: var(--bg-page); }
+.bg-theme-main { background-color: var(--bg-main); }
+.bg-theme-band { background-color: var(--bg-band); }
+.text-theme-primary { color: var(--text-primary); }
+.bg-theme-primary { background-color: var(--text-primary); }
+.text-theme-muted { color: var(--text-muted); }
+.text-theme-narrative { color: var(--text-narrative); }
+.border-theme { border-color: var(--border-color); }
+.bg-theme-avatar { background-color: var(--avatar-bg); }
+.border-theme-avatar { border-color: var(--border-avatar); }
+.bg-theme-chip { background-color: var(--chip-bg); }
+.bg-theme-chip-hover:hover { background-color: var(--chip-hover); }
+.text-theme-chip { color: var(--chip-text); }
+.bg-theme-chip-active { background-color: var(--chip-active-bg); }
+.text-theme-chip-active { color: var(--chip-active-text); }
+.bg-theme-chip-highlight { background-color: var(--chip-highlight-bg); }
+.text-theme-chip-highlight { color: var(--chip-highlight-text); }
+.bg-theme-btn-primary { background-color: var(--btn-primary-bg); }
+.text-theme-btn-primary { color: var(--btn-primary-text); }
+.bg-theme-btn-secondary { background-color: var(--btn-secondary-bg); }
+.text-theme-btn-secondary { color: var(--btn-secondary-text); }
+.bg-theme-btn-secondary-hover:hover { background-color: var(--btn-secondary-hover); }
+.text-theme-btn-tertiary { color: var(--btn-tertiary-text); }
+.bg-theme-status { background-color: var(--status-bg); }
+.border-theme-status { border-color: var(--status-border); }
+.text-theme-status { color: var(--status-text); }
+.text-theme-status-bold { color: var(--status-bold); }
+.bg-theme-popover { background-color: var(--popover-bg); }
+.border-theme-popover { border-color: var(--popover-border); }
+.text-theme-popover { color: var(--popover-text); }
+.text-theme-popover-subtext { color: var(--popover-subtext); }
+.bg-theme-popover-copy { background-color: var(--popover-copy-bg); }
+.bg-theme-popover-copy-hover:hover { background-color: var(--popover-copy-hover); }
+
+/* Subtle background grain layer */
 .bg-grain-layer {
   position: fixed;
   inset: 0;
   pointer-events: none;
   background-image: url("/bg/background.png");
   background-repeat: repeat;
-  opacity: 0.3;
+  opacity: var(--grain-opacity);
+  filter: var(--grain-filter);
   z-index: 0;
   mask-image: radial-gradient(ellipse at 50% 30%, black 50%, transparent 95%);
   -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 50%, transparent 95%);
 }
 
-/* Transitions strictly under 300ms, no drop shadows */
+/* Micro-transitions */
 a, button {
   transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
               color 150ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -140,21 +406,21 @@ a, button {
 }
 
 .mention-root:hover .mention-link {
-  border: 1px dashed #363635;
+  border: 1px dashed var(--text-primary);
   background-color: rgba(54, 54, 53, 0.04);
+  text-decoration: none;
+}
+
+.dark .mention-root:hover .mention-link,
+[data-theme="dark"] .mention-root:hover .mention-link {
+  border: 1px dashed var(--text-primary);
+  background-color: rgba(237, 237, 235, 0.08);
   text-decoration: none;
 }
 
 /* Animated multi-color hatch diagonal stripe pattern clipped to text */
 .hatch-text-band {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    #363635 0px 6px,
-    #f97316 6px 12px,
-    #06b6d4 12px 18px,
-    #6366f1 18px 24px,
-    #10b981 24px 30px
-  );
+  background-image: var(--hatch-text-gradient);
   background-size: 60px 60px;
   -webkit-background-clip: text;
   background-clip: text;
@@ -163,5 +429,49 @@ a, button {
   animation: hatch-flow-x 8s linear infinite;
 }
 
+/* Next-Gen Floating Navbar Styles & Micro-Animations */
+@keyframes nav-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-nav-entrance {
+  animation: nav-slide-down 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.nav-gliding-pill {
+  background-color: var(--nav-hover-pill);
+  border: 1px solid var(--nav-hover-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Animated Multi-Color Hatch Border (Border ONLY - 100% Clean Solid Theme Background) */
+@keyframes hatch-border-flow {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 0 0, 60px 0;
+  }
+}
+
+.hatch-animated-border {
+  border: 1.5px solid transparent;
+  background-image:
+    linear-gradient(var(--popover-bg), var(--popover-bg)),
+    var(--hatch-text-gradient);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-size: 100% 100%, 60px 60px;
+  animation: hatch-border-flow 8s linear infinite;
+}
 
 

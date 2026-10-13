@@ -19,8 +19,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lexend.variable} ${lexend.className} h-full antialiased`}>
-      <body className={`${lexend.className} min-h-full flex flex-col font-sans text-[var(--foreground)]`}>
+    <html lang="en" suppressHydrationWarning className={`${lexend.variable} ${lexend.className} h-full antialiased`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const storedTheme = localStorage.getItem('theme');
+                  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                  const theme = storedTheme === 'dark' || (!storedTheme && systemPrefersDark) ? 'dark' : 'light';
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                    document.documentElement.setAttribute('data-theme', 'light');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className={`${lexend.className} min-h-full flex flex-col font-sans text-theme-primary bg-theme-page`}>
         {children}
       </body>
     </html>
