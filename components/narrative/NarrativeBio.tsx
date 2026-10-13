@@ -28,7 +28,7 @@ export function NarrativeBio() {
           <TopicChips />
         </div>
 
-        <div id="projects" className="leading-relaxed theme-level-5 scroll-mt-28">
+        <div className="leading-relaxed theme-level-5">
           Specialized in Hybrid Search RAG architectures combining semantic vector similarity with PostgreSQL full-text search across projects like{" "}
           <InteractiveMention
             label="VELO CRM"

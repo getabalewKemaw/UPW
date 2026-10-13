@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/data/nav-data";
 import { ArrowUpRight } from "lucide-react";
 import { sound } from "@/utils/sound";
@@ -18,6 +20,10 @@ export function MobileNavDrawer({
   onSelect,
   onClose,
 }: MobileNavDrawerProps) {
+  const pathname = usePathname();
+  const isAboutPage = pathname === "/about";
+  const isServicesPage = pathname === "/services" || pathname === "/service";
+  const isSubPage = isAboutPage || isServicesPage;
   const drawerRef = useRef<HTMLDivElement>(null);
 
   // Close on Escape or click outside
@@ -57,24 +63,11 @@ export function MobileNavDrawer({
 
       {NAV_ITEMS.map((item) => {
         const isActive = activeId === item.id;
-        return (
-          <a
-            key={item.id}
-            href={item.href}
-            onClick={() => {
-              sound.playClick();
-              onSelect(item.id);
-              onClose();
-            }}
-            target={item.isExternal ? "_blank" : undefined}
-            rel={item.isExternal ? "noopener noreferrer" : undefined}
-            className={`group flex items-center justify-between px-3.5 py-2.5 rounded-xl text-base sm:text-[17px] font-medium transition-all duration-200 cursor-pointer ${
-              isActive
-                ? "bg-theme-btn-secondary-hover text-theme-primary font-semibold"
-                : "text-theme-muted hover:text-theme-primary hover:bg-theme-btn-secondary-hover/70"
-            }`}
-            role="menuitem"
-          >
+        const effectiveHref =
+          isSubPage && item.href.startsWith("#") ? `/${item.href}` : item.href;
+
+        const innerContent = (
+          <>
             <div className="flex items-center gap-2.5">
               <span
                 className={`w-2 h-2 rounded-full transition-all duration-200 ${
@@ -93,6 +86,49 @@ export function MobileNavDrawer({
                 Active
               </span>
             ) : null}
+          </>
+        );
+
+        const className = `group flex items-center justify-between px-3.5 py-2.5 rounded-xl text-base sm:text-[17px] font-medium transition-all duration-200 cursor-pointer ${
+          isActive
+            ? "bg-theme-btn-secondary-hover text-theme-primary font-semibold"
+            : "text-theme-muted hover:text-theme-primary hover:bg-theme-btn-secondary-hover/70"
+        }`;
+
+        const handleClick = () => {
+          try {
+            sessionStorage.setItem("gk_preloader_seen", "true");
+          } catch {}
+          sound.playClick();
+          onSelect(item.id);
+          onClose();
+        };
+
+        if (item.href.startsWith("/") || (isSubPage && item.href.startsWith("#"))) {
+          return (
+            <Link
+              key={item.id}
+              href={item.href.startsWith("/") ? item.href : effectiveHref}
+              onClick={handleClick}
+              className={className}
+              role="menuitem"
+            >
+              {innerContent}
+            </Link>
+          );
+        }
+
+        return (
+          <a
+            key={item.id}
+            href={effectiveHref}
+            onClick={handleClick}
+            target={item.isExternal ? "_blank" : undefined}
+            rel={item.isExternal ? "noopener noreferrer" : undefined}
+            className={className}
+            role="menuitem"
+          >
+            {innerContent}
           </a>
         );
       })}

@@ -18,7 +18,12 @@ export function InteractiveMention({
   const handleCopy = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    navigator.clipboard.writeText(href);
+    const cleanText = href.startsWith("tel:")
+      ? href.replace("tel:", "")
+      : href.startsWith("mailto:")
+      ? href.replace("mailto:", "")
+      : href;
+    navigator.clipboard.writeText(cleanText);
     sound.playCopy();
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);

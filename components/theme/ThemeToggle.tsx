@@ -1,32 +1,37 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { Sun, Moon } from "lucide-react";
 import { sound } from "@/utils/sound";
+
+const emptySubscribe = () => () => {};
 
 interface ThemeToggleProps {
   inline?: boolean;
 }
 
 export function ThemeToggle({ inline = false }: ThemeToggleProps) {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const isDark =
-      document.documentElement.classList.contains("dark") ||
-      document.documentElement.getAttribute("data-theme") === "dark";
-    setTheme(isDark ? "dark" : "light");
-  }, []);
+  const isClient = useSyncExternalStore(emptySubscribe, () => true, () => false);
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    if (typeof window !== "undefined") {
+      return document.documentElement.classList.contains("dark") ||
+        document.documentElement.getAttribute("data-theme") === "dark"
+        ? "dark"
+        : "light";
+    }
+    return "light";
+  });
 
   const handleSetTheme = (newTheme: "light" | "dark", e?: React.MouseEvent) => {
-    if (newTheme === theme && mounted) return;
+    if (newTheme === theme && isClient) return;
     sound.playTheme(newTheme === "dark");
     setTheme(newTheme);
     try {
       localStorage.setItem("theme", newTheme);
-    } catch (_) {}
+    } catch {
+      // storage unavailable
+    }
+
 
     const applyTheme = () => {
       if (newTheme === "dark") {
@@ -99,7 +104,7 @@ export function ThemeToggle({ inline = false }: ThemeToggleProps) {
       {/* Animated sliding highlight background pill */}
       <div
         className={`absolute top-0.5 bottom-0.5 ${indicatorWidth} rounded-full bg-theme-btn-primary shadow-sm transition-transform duration-300 ease-out pointer-events-none ${
-          mounted && theme === "dark" ? indicatorTranslate : "translate-x-0"
+          isClient && theme === "dark" ? indicatorTranslate : "translate-x-0"
         }`}
       />
 
@@ -107,17 +112,17 @@ export function ThemeToggle({ inline = false }: ThemeToggleProps) {
       <button
         type="button"
         onClick={(e) => handleSetTheme("light", e)}
-        aria-pressed={mounted && theme === "light"}
+        aria-pressed={isClient && theme === "light"}
         title="Switch to light mode"
         className={`relative z-10 ${buttonSize} rounded-full flex items-center justify-center cursor-pointer transition-colors duration-200 ${
-          mounted && theme === "light"
+          isClient && theme === "light"
             ? "text-theme-btn-primary"
             : "text-theme-muted hover:text-theme-primary"
         }`}
       >
         <Sun
           className={`${iconSize} transition-transform duration-300 ${
-            mounted && theme === "light" ? "rotate-0 scale-105" : "-rotate-45 scale-90 opacity-70"
+            isClient && theme === "light" ? "rotate-0 scale-105" : "-rotate-45 scale-90 opacity-70"
           }`}
         />
       </button>
@@ -126,17 +131,17 @@ export function ThemeToggle({ inline = false }: ThemeToggleProps) {
       <button
         type="button"
         onClick={(e) => handleSetTheme("dark", e)}
-        aria-pressed={mounted && theme === "dark"}
+        aria-pressed={isClient && theme === "dark"}
         title="Switch to dark mode"
         className={`relative z-10 ${buttonSize} rounded-full flex items-center justify-center cursor-pointer transition-colors duration-200 ${
-          mounted && theme === "dark"
+          isClient && theme === "dark"
             ? "text-theme-btn-primary"
             : "text-theme-muted hover:text-theme-primary"
         }`}
       >
         <Moon
           className={`${iconSize} transition-transform duration-300 ${
-            mounted && theme === "dark" ? "rotate-0 scale-105" : "rotate-45 scale-90 opacity-70"
+            isClient && theme === "dark" ? "rotate-0 scale-105" : "rotate-45 scale-90 opacity-70"
           }`}
         />
       </button>

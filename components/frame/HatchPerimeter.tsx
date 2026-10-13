@@ -5,16 +5,17 @@ import { ClickSpark } from "@/components/effects/ClickSpark";
 
 interface HatchPerimeterProps {
   children: React.ReactNode;
+  showPreloader?: boolean;
 }
 
-export function HatchPerimeter({ children }: HatchPerimeterProps) {
+export function HatchPerimeter({ children, showPreloader = true }: HatchPerimeterProps) {
   return (
     <div className="relative min-h-screen w-full flex flex-col bg-theme-page text-theme-primary selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
       {/* Tactile Micro-Point UI Click Sparks & Haptic Sound */}
       <ClickSpark />
 
-      {/* High-Performance Marketing Preloader */}
-      <Preloader />
+      {/* High-Performance Marketing Preloader (Conditionally rendered) */}
+      {showPreloader && <Preloader />}
 
       {/* Subtle background grain (controlled opacity, clean white or matte dark) */}
       <div className="bg-grain-layer" />

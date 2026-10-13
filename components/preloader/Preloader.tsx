@@ -30,6 +30,7 @@ const PHASES = [
 ];
 
 export function Preloader({ onComplete }: PreloaderProps) {
+  const [mounted, setMounted] = useState(false);
   const [phaseIndex, setPhaseIndex] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -42,12 +43,29 @@ export function Preloader({ onComplete }: PreloaderProps) {
       setIsFinished(true);
       try {
         sessionStorage.setItem("gk_preloader_seen", "true");
-      } catch (_) {}
+      } catch {
+        // storage unavailable
+      }
       onComplete?.();
     }, 650);
   }, [onComplete]);
 
+  // Client-only mount detection and sessionStorage check to ensure 100% SSR hydration match
   useEffect(() => {
+    try {
+      if (sessionStorage.getItem("gk_preloader_seen") === "true") {
+        setIsFinished(true);
+        return;
+      }
+    } catch {
+      // storage unavailable
+    }
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || isFinished) return;
+
     // Smooth Progress Interpolation (0 -> 100% over 14.8 seconds)
     const startTime = performance.now();
     const duration = 14800;
@@ -80,9 +98,9 @@ export function Preloader({ onComplete }: PreloaderProps) {
       clearTimeout(tExit);
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [dismiss]);
+  }, [mounted, isFinished, dismiss]);
 
-  if (isFinished) return null;
+  if (!mounted || isFinished) return null;
 
   const current = PHASES[phaseIndex];
 

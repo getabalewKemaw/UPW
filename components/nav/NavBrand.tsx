@@ -1,20 +1,25 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function NavBrand() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   const handleScrollTop = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (isHome) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
-  return (
-    <a
-      href="#overview"
-      onClick={handleScrollTop}
-      title="Getabalew Kemaw (GK)"
-      className="flex items-center gap-3 pl-2 pr-3 sm:pr-4 py-1.5 rounded-full hover:bg-theme-btn-secondary-hover transition-all duration-200 group cursor-pointer shrink-0"
-    >
+  const className =
+    "flex items-center gap-3 pl-2 pr-3 sm:pr-4 py-1.5 rounded-full hover:bg-theme-btn-secondary-hover transition-all duration-200 group cursor-pointer shrink-0";
+
+  const content = (
+    <>
       {/* Photo Avatar Thumbnail with Animated Status Radar */}
       <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-theme-avatar shrink-0 bg-theme-avatar shadow-xs">
         <Image
@@ -40,6 +45,25 @@ export function NavBrand() {
           · getabalew kemaw
         </span>
       </span>
+    </>
+  );
+
+  if (!isHome) {
+    return (
+      <Link href="/" title="Getabalew Kemaw (GK)" className={className}>
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <a
+      href="#overview"
+      onClick={handleScrollTop}
+      title="Getabalew Kemaw (GK)"
+      className={className}
+    >
+      {content}
     </a>
   );
 }

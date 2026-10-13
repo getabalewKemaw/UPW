@@ -1,21 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 import { sound } from "@/utils/sound";
+
+const emptySubscribe = () => () => {};
 
 interface SoundToggleProps {
   className?: string;
 }
 
 export function SoundToggle({ className = "" }: SoundToggleProps) {
-  const [enabled, setEnabled] = useState(true);
-  const [mounted, setMounted] = useState(false);
+  const isClient = useSyncExternalStore(emptySubscribe, () => true, () => false);
+  const [enabled, setEnabled] = useState(() => sound.isEnabled());
 
-  useEffect(() => {
-    setMounted(true);
-    setEnabled(sound.isEnabled());
-  }, []);
 
   const handleToggle = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -23,7 +21,7 @@ export function SoundToggle({ className = "" }: SoundToggleProps) {
     setEnabled(newState);
   };
 
-  if (!mounted) return null;
+  if (!isClient) return null;
 
   return (
     <button

@@ -464,7 +464,7 @@ a, button {
 }
 
 .hatch-animated-border {
-  border: 1.5px solid transparent;
+  border: 3px solid transparent;
   background-image:
     linear-gradient(var(--popover-bg), var(--popover-bg)),
     var(--hatch-text-gradient);
@@ -472,6 +472,17 @@ a, button {
   background-clip: padding-box, border-box;
   background-size: 100% 100%, 60px 60px;
   animation: hatch-border-flow 8s linear infinite;
+}
+
+.hatch-animated-input-border {
+  border: 3px solid transparent !important;
+  background-image:
+    linear-gradient(var(--bg-page), var(--bg-page)),
+    var(--hatch-text-gradient) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+  background-size: 100% 100%, 60px 60px !important;
+  animation: hatch-border-flow 6s linear infinite !important;
 }
 
 /* Micro-point UI click burst animation */
@@ -492,6 +503,75 @@ a, button {
 
 .animate-spark-burst {
   animation: spark-burst 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Form Input Boxes: Crisp visible outline on idle, bold animated rainbow border on focus */
+.form-input-box {
+  position: relative;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 2px solid #b3b3b1;
+  background-color: #fafaf9;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  box-shadow: none !important;
+}
+
+.dark .form-input-box,
+[data-theme="dark"] .form-input-box {
+  border-color: #3e3e3d;
+  background-color: #171716;
+}
+
+.form-input-box:hover {
+  border-color: #888886;
+}
+
+.dark .form-input-box:hover,
+[data-theme="dark"] .form-input-box:hover {
+  border-color: #555554;
+}
+
+.form-input-box:focus-within,
+.form-input-box.is-focused {
+  border: 3.5px solid transparent !important;
+  background-image:
+    linear-gradient(var(--bg-page), var(--bg-page)),
+    var(--hatch-text-gradient) !important;
+  background-origin: border-box !important;
+  -webkit-background-clip: padding-box, border-box !important;
+  background-clip: padding-box, border-box !important;
+  background-size: 100% 100%, 60px 60px !important;
+  animation: hatch-border-flow 4s linear infinite !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Outer Form Card Container */
+.form-card-container {
+  border: 2px solid #c8c8c6;
+  background-color: #fafaf9;
+  transition: all 0.2s ease;
+  box-shadow: none !important;
+}
+
+.dark .form-card-container,
+[data-theme="dark"] .form-card-container {
+  border-color: #2e2e2d;
+  background-color: #141413;
+}
+
+.form-card-container:focus-within,
+.form-card-container.is-focused {
+  border: 3.5px solid transparent !important;
+  background-image:
+    linear-gradient(var(--popover-bg), var(--popover-bg)),
+    var(--hatch-text-gradient) !important;
+  background-origin: border-box !important;
+  -webkit-background-clip: padding-box, border-box !important;
+  background-clip: padding-box, border-box !important;
+  background-size: 100% 100%, 60px 60px !important;
+  animation: hatch-border-flow 6s linear infinite !important;
+  box-shadow: none !important;
 }
 
 

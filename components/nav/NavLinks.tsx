@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NAV_ITEMS } from "@/data/nav-data";
 import { sound } from "@/utils/sound";
 
@@ -10,14 +12,25 @@ interface NavLinksProps {
 }
 
 export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
-  const [internalActiveId, setInternalActiveId] = useState<string>("overview");
+  const pathname = usePathname();
+  const isAboutPage = pathname === "/about";
+  const isServicesPage = pathname === "/services" || pathname === "/service";
+  const isSubPage = isAboutPage || isServicesPage;
+
+  const [internalActiveId, setInternalActiveId] = useState<string>(
+    isAboutPage ? "about" : isServicesPage ? "services" : "overview"
+  );
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [pillRect, setPillRect] = useState<{ left: number; width: number } | null>(null);
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const linkRefs = useRef<{ [key: string]: HTMLAnchorElement | null }>({});
+  const linkRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
-  const activeId = propActiveId ?? internalActiveId;
+  const activeId = isAboutPage
+    ? "about"
+    : isServicesPage
+    ? "services"
+    : (propActiveId ?? internalActiveId);
 
   const updatePill = useCallback(() => {
     const targetId = hoveredId || activeId;
@@ -46,10 +59,11 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
     return () => window.removeEventListener("resize", updatePill);
   }, [updatePill]);
 
-  // Scroll-spy to automatically track active section on scroll
+  // Scroll-spy to automatically track active section on scroll (home page only)
   useEffect(() => {
+    if (isSubPage) return;
     if (propActiveId) return; // parent controlled
-    const sections = ["overview", "domains", "projects"];
+    const sections = ["overview", "projects", "experience", "contact"];
     const handleScroll = () => {
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
@@ -64,9 +78,12 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [propActiveId]);
+  }, [propActiveId, isServicesPage]);
 
   const handleLinkClick = (id: string) => {
+    try {
+      sessionStorage.setItem("gk_preloader_seen", "true");
+    } catch {}
     sound.playClick();
     setInternalActiveId(id);
     onSelect?.(id);
@@ -93,6 +110,62 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
       {NAV_ITEMS.map((item) => {
         const isActive = activeId === item.id;
         const isHovered = hoveredId === item.id;
+        const className = `relative z-10 px-3 md:px-3.5 lg:px-4 py-1.5 text-sm sm:text-[15px] font-medium transition-all duration-200 rounded-full whitespace-nowrap flex items-center gap-1.5 cursor-pointer active:scale-95 ${
+          isActive
+            ? "text-theme-primary font-semibold"
+            : isHovered
+            ? "text-theme-primary"
+            : "text-theme-muted hover:text-theme-primary"
+        }`;
+
+        const innerContent = (
+          <>
+            <span className="transition-transform duration-200 hover:scale-105">
+              {item.label}
+            </span>
+            {isActive && (
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 shadow-[0_0_6px_rgba(16,185,129,0.8)]" />
+            )}
+          </>
+        );
+
+        // Internal route links (e.g. /about, /services)
+        if (item.href.startsWith("/")) {
+          return (
+            <Link
+              key={item.id}
+              ref={(el) => {
+                linkRefs.current[item.id] = el;
+              }}
+              href={item.href}
+              onClick={() => handleLinkClick(item.id)}
+              onMouseEnter={() => setHoveredId(item.id)}
+              className={className}
+            >
+              {innerContent}
+            </Link>
+          );
+        }
+
+        const effectiveHref =
+          isSubPage && item.href.startsWith("#") ? `/${item.href}` : item.href;
+
+        if (isSubPage && item.href.startsWith("#")) {
+          return (
+            <Link
+              key={item.id}
+              ref={(el) => {
+                linkRefs.current[item.id] = el;
+              }}
+              href={effectiveHref}
+              onClick={() => handleLinkClick(item.id)}
+              onMouseEnter={() => setHoveredId(item.id)}
+              className={className}
+            >
+              {innerContent}
+            </Link>
+          );
+        }
 
         return (
           <a
@@ -100,25 +173,14 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
             ref={(el) => {
               linkRefs.current[item.id] = el;
             }}
-            href={item.href}
+            href={effectiveHref}
             onClick={() => handleLinkClick(item.id)}
             onMouseEnter={() => setHoveredId(item.id)}
             target={item.isExternal ? "_blank" : undefined}
             rel={item.isExternal ? "noopener noreferrer" : undefined}
-            className={`relative z-10 px-4 sm:px-5 md:px-5.5 py-2 text-[16px] sm:text-[17px] md:text-[18px] font-medium transition-all duration-200 rounded-full whitespace-nowrap flex items-center gap-2 cursor-pointer active:scale-95 ${
-              isActive
-                ? "text-theme-primary font-semibold"
-                : isHovered
-                ? "text-theme-primary"
-                : "text-theme-muted hover:text-theme-primary"
-            }`}
+            className={className}
           >
-            <span className="transition-transform duration-200 hover:scale-105">
-              {item.label}
-            </span>
-            {isActive && (
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 shadow-[0_0_6px_rgba(16,185,129,0.8)]" />
-            )}
+            {innerContent}
           </a>
         );
       })}

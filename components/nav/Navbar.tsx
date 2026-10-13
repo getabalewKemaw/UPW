@@ -18,7 +18,7 @@ export function Navbar() {
       setScrolled(window.scrollY > 15);
 
       // Section tracker for synchronized active highlighting
-      const sections = ["overview", "domains", "projects"];
+      const sections = ["overview", "projects", "experience"];
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el) {
