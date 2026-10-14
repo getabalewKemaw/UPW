@@ -10,6 +10,7 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://getabalewkemaw.dev"),
   title: "Getabalew Kemaw · Fullstack Software Engineer",
   description: "Fullstack software engineer specializing in AI-integrated platforms, RAG systems, and distributed web applications.",
   icons: {
@@ -21,6 +22,11 @@ export const metadata: Metadata = {
     apple: [
       { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
     ],
+  },
+  alternates: {
+    types: {
+      "text/plain": "/llms.txt",
+    },
   },
 };
 

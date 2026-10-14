@@ -1,0 +1,40 @@
+# Getabalew Kemaw — Full-Stack Software Engineer & AI Researcher
+
+> Full-Stack Software Engineer specializing in dependable web products, distributed backend systems, test automation, cloud infrastructure, and AI engineering (Hybrid Search & RAG). Based in Ethiopia · Open to remote opportunities worldwide (US, UK, EU, Dubai) and open to relocation.
+
+## Quick Facts
+- **Name**: Getabalew Kemaw
+- **Current Role**: Full-Stack Instructor & Developer at AllCan Tech (https://allcan.tech)
+- **Location**: Addis Ababa, Ethiopia (UTC+3 / EAT)
+- **Work Preferences**: Remote Worldwide (US, UK, EU, Dubai) · Open to Relocation · Full-time & Advisory Contracts
+- **Email**: getabalewkemaw@gmail.com
+- **Telegram**: https://t.me/GetabalewKemaw (@GetabalewKemaw)
+- **GitHub**: https://github.com/getabalewKemaw
+- **LinkedIn**: https://www.linkedin.com/in/getabalewkemaw/
+
+## Core Disciplines & Technical Capabilities
+1. **Full-Stack Development**: Next.js (App Router, Turbopack, SSR/PPR), React, TypeScript, modern semantic UI/UX craftsmanship, accessible responsive interfaces.
+2. **Backend Engineering**: Node.js, Express, Python (FastAPI), Java (Spring Boot), PostgreSQL, Redis caching, Apache Kafka, transactional ledger state machines with ACID guarantees.
+3. **QA & Test Automation**: Playwright, Jest, Cypress, integration testing, CI/CD automated PR regression blockers, zero-regression workflows.
+4. **DevOps & Cloud Deployments**: Docker, Kubernetes, Nginx, Linux, GitHub Actions, AWS, Google Cloud, zero-downtime rolling deployments, health probe telemetry.
+5. **AI Engineering & RAG**: Hybrid search retrieval, PostgreSQL pgvector, embedding pipelines, semantic similarity, Retrieval-Augmented Generation, localized document search.
+
+## Navigation & Site Routes
+- Home Page (/): Professional overview, 5 targeted production case studies, engineering timeline, and direct communication console.
+- Engineering Deep Dives (/engineering): Practical architectural decisions, database query optimizations, automated test suites, minimal containerization, and business outcomes without hype.
+- Services & Booking (/services): Custom software solutions, business automation, mobile applications, engineering mentorship, 3-step delivery workflow, and direct appointment scheduling.
+- About (/about): Engineering background, AllCan Tech instructional work, craftsmanship philosophy, and story.
+- Exhaustive Architecture Index (/llms-full.txt): Complete technical breakdown of architectural patterns, system case studies, and service specifications.
+
+## 5 Production Case Studies
+1. **Real-Time Distributed Telemetry Engine**: High-throughput telemetry pipeline aggregating metrics with sub-15ms query response times using PostgreSQL partitioning and Redis memory buffers.
+2. **ACID Transactional Payment Engine**: Secure multi-gateway payment processing (Chapa, Telebirr, Stripe) with cryptographic HMAC webhook validation and idempotent ledger state transitions preventing double-charges.
+3. **Hybrid Vector RAG Search Platform**: Dual-mode semantic search combining lexical BM25 and pgvector embeddings for grounded, hallucination-free document retrieval.
+4. **Enterprise Playwright End-to-End Automated QA Suite**: Automated test suite simulating complex user flows, payment edge cases, and network timeouts across Chromium, Firefox, and WebKit on every pull request.
+5. **Containerized Zero-Downtime Multi-Stage Cloud Pipeline**: Minimal Docker images with Nginx reverse proxying, GitHub Actions CI/CD, and automatic health probe rollbacks for consistent 99.9% uptime.
+
+## Client Services & Delivery Process
+All engagements follow a transparent 3-step workflow:
+1. **Discovery Scoping Call**: Direct 1-on-1 consultation (< 15 min reply time) to clarify requirements and map milestones without technical jargon.
+2. **Affordable Pricing Agreement**: Predictable, milestone-backed budget with fixed scope and zero hidden fees.
+3. **Agile Delivery & Rapid Shipping**: 1-to-2 week Agile sprints with testable live demo deployments, fast Telegram/Slack feedback loops, and complete hands-on team software training.

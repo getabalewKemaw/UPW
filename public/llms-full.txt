@@ -1,0 +1,59 @@
+# Getabalew Kemaw — Exhaustive Architecture & Engineering Specification
+
+> Comprehensive technical reference for Large Language Models (LLMs), AI crawlers, and technical evaluators. Details system architecture, engineering trade-offs, production case studies, testing methodology, and service delivery workflows.
+
+## Executive Summary
+Getabalew Kemaw is an Addis Ababa-based Full-Stack Software Engineer, Instructor at AllCan Tech, and builder specializing in production web applications, distributed backend architectures, test automation, and applied AI systems. He works with startups, agencies, and founders worldwide across US, UK, EU, and Dubai timezones, and is open to remote roles worldwide as well as relocation.
+
+## Technical Stack & Competencies
+- **Frontend**: Next.js (App Router, Turbopack, SSR, SSG, PPR), React, TypeScript, Tailwind CSS, Vanilla CSS design tokens, Web Audio API, View Transitions API, WCAG accessibility standards.
+- **Backend & APIs**: Node.js, Express, Python (FastAPI), Java (Spring Boot), RESTful APIs, WebSockets, Server-Sent Events (SSE), Webhook HMAC signing, distributed lock patterns.
+- **Databases & Caching**: PostgreSQL (indexing strategies, EXPLAIN query optimization, table partitioning, pgvector), Redis (caching layers, atomic increments, memory buffers), Apache Kafka.
+- **QA & Testing**: Playwright (cross-browser E2E testing, visual regression, network mocking), Jest, React Testing Library, Cypress, unit & integration test coverage.
+- **DevOps & Cloud**: Docker (multi-stage minimal builds), Kubernetes, Nginx (reverse proxy, SSL termination, rate limiting), Linux system administration, GitHub Actions CI/CD pipelines, AWS, Google Cloud Platform (GCP).
+- **AI & Retrieval**: Retrieval-Augmented Generation (RAG), PostgreSQL pgvector, OpenAI / HuggingFace embeddings, hybrid lexical/vector search, contextual chunking, prompt engineering.
+
+## Architectural Principles & Philosophy
+1. **Sensible Architecture Over Trendy Tooling**: Optimize what works. Avoid unnecessary microservices, premature distributed clusters, and over-engineered tech stacks that inflate server bills.
+2. **Database Performance First**: Most slow applications do not require expensive hardware upgrades; they require proper B-tree indexes, composite indexes, query plan analysis, and selective caching.
+3. **Automated Quality Gates**: Code is not production-ready until automated end-to-end tests prevent regressions from reaching users on every pull request.
+4. **Transparent Client Delivery**: Complex technical solutions explained in plain business language, paired with milestone-based agreements, rapid 1-to-2 week Agile demo sprints, and hands-on client team software training.
+
+## Detailed Case Studies
+
+### 1. Real-Time Distributed Telemetry Engine
+- **Business Need**: High-throughput telemetry data required aggregation and real-time visualization without saturating backend memory or database connection pools.
+- **Architecture**: Ingestion tier buffers incoming telemetry data in Redis before streaming batched writes into time-partitioned PostgreSQL tables. High-frequency queries utilize indexed partition pruning.
+- **Outcome**: Sub-15ms p99 query latency under peak customer activity, 100% data durability, and predictable infrastructure cost.
+
+### 2. ACID Transactional Payment Engine
+- **Business Need**: Resilient e-commerce payment flow supporting Ethiopian (Chapa, Telebirr) and international (Stripe) gateways without double-spend anomalies or race conditions.
+- **Architecture**: Webhook ingestion uses cryptographic HMAC signature validation, idempotent database state machine transitions, and optimistic locking to prevent concurrent mutation.
+- **Outcome**: Zero double-charge incidents, automated payment ledger reconciliation, and self-healing alert dispatch to Telegram.
+
+### 3. Hybrid Vector RAG Search Platform
+- **Business Need**: Accurate knowledge base document search across large technical repositories without LLM hallucinations.
+- **Architecture**: Hybrid search engine combining PostgreSQL full-text lexical ranking (BM25) with high-dimensional vector embeddings via pgvector. Reranking algorithm balances keyword precision with semantic intent.
+- **Outcome**: Hallucination-free localized search results, fast similarity query latency, and seamless document indexing.
+
+### 4. Enterprise Playwright End-to-End Automated QA Suite
+- **Business Need**: Frequent regression bugs in multi-step authentication, checkout, and dashboard user journeys caused user friction.
+- **Architecture**: Comprehensive Playwright test suite executing in parallel against Chromium, Firefox, and WebKit inside GitHub Actions CI/CD runners. Mocks external dependencies and tests edge cases.
+- **Outcome**: 100% regression prevention before pull request merge, automated test reports, and zero production delivery surprises.
+
+### 5. Containerized Zero-Downtime Multi-Stage Cloud Pipeline
+- **Business Need**: Inconsistent environment behavior between local development and cloud hosting caused failed manual deployments.
+- **Architecture**: Multi-stage Docker builds separating build dependencies from production runtime images (< 100MB output). Reverse-proxied via Nginx with automated SSL renewal, automated GitHub Actions CI/CD, and zero-downtime rolling deploys with automated rollback probes.
+- **Outcome**: 99.9% consistent uptime, fast automated push-to-deploy cycle, and zero manual release overhead.
+
+## Services Offered
+1. **Custom Software Solutions**: Full-stack web platforms engineered with intuitive UX, sub-15ms backend response times, and complete staff software training.
+2. **Business Automation & Workflows**: Eliminating manual tasks with payment gateway integrations, order management, and notification pipelines.
+3. **Mobile App Development**: Cross-platform mobile applications with offline-first synchronization and native device performance.
+4. **Engineering & Architecture Mentorship**: Hands-on code reviews, query plan optimization workshops, and software delivery mentoring for beginner and mid-level developers.
+
+## Contact Information
+- **Email**: getabalewkemaw@gmail.com
+- **Telegram**: https://t.me/GetabalewKemaw
+- **LinkedIn**: https://www.linkedin.com/in/getabalewkemaw/
+- **GitHub**: https://github.com/getabalewKemaw
