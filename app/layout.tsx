@@ -12,6 +12,16 @@ const lexend = Lexend({
 export const metadata: Metadata = {
   title: "Getabalew Kemaw · Fullstack Software Engineer",
   description: "Fullstack software engineer specializing in AI-integrated platforms, RAG systems, and distributed web applications.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
