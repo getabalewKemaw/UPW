@@ -92,12 +92,12 @@ export function ThemeToggle({ inline = false }: ThemeToggleProps) {
     ? "relative flex items-center p-0.5 rounded-full border border-theme bg-theme-popover"
     : "fixed top-5 right-5 sm:top-6 sm:right-8 z-50 flex items-center p-1 rounded-full border border-theme bg-theme-popover/90 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.08)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)] transition-all duration-300";
 
-  const buttonSize = inline ? "w-[32px] sm:w-[36px] h-[30px] sm:h-[32px]" : "w-[40px] h-[38px]";
-  const indicatorWidth = inline ? "w-[32px] sm:w-[36px]" : "w-[40px]";
+  const buttonSize = inline ? "w-[36px] sm:w-[38px] h-[34px] sm:h-[36px]" : "w-[40px] h-[38px]";
+  const indicatorWidth = inline ? "w-[36px] sm:w-[38px]" : "w-[40px]";
   const indicatorTranslate = inline
-    ? "translate-x-[34px] sm:translate-x-[38px]"
+    ? "translate-x-[38px] sm:translate-x-[40px]"
     : "translate-x-[44px]";
-  const iconSize = inline ? "w-4 h-4 sm:w-[17px] sm:h-[17px]" : "w-5 h-5";
+  const iconSize = inline ? "w-[17px] h-[17px] sm:w-[19px] sm:h-[19px]" : "w-5 h-5";
 
   return (
     <aside className={containerClasses} role="group" aria-label="Theme switcher">

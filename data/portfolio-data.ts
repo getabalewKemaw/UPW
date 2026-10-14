@@ -41,11 +41,11 @@ export const SOCIAL_LINKS = {
 };
 
 export const TOPIC_CHIPS: TopicChipItem[] = [
-  { id: "fullstack", label: "Fullstack SaaS & Next.js" },
-  { id: "rag", label: "pgvector & Hybrid RAG" },
-  { id: "realtime", label: "Real-Time Media Streaming" },
-  { id: "python", label: "Python & NLP Sentiment Pipelines" },
-  { id: "backend", label: "PostgreSQL & Prisma" },
+  { id: "fullstack", label: "Full-Stack Development" },
+  { id: "backend", label: "Backend Engineering" },
+  { id: "qa", label: "QA & Test Automation" },
+  { id: "devops", label: "DevOps & Deployment" },
+  { id: "ai", label: "AI Engineering" },
 ];
 
 export const FEATURED_PROJECTS: ProjectCaseStudy[] = [

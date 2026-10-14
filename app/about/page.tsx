@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <HatchPerimeter showPreloader={false}>
-      <main className="flex-1 w-full bg-theme-main flex flex-col justify-center px-6 sm:px-10 md:px-12 lg:px-16 pt-24 sm:pt-28 pb-16 sm:pb-20 md:pb-24">
+      <main className="flex-1 w-full bg-theme-main flex flex-col justify-center px-6 sm:px-10 md:px-12 lg:px-16 pt-32 sm:pt-36 md:pt-40 lg:pt-44 pb-16 sm:pb-20 md:pb-24">
         <div className="w-full flex flex-col gap-14">
           <AboutPageView />
           <FooterSection />

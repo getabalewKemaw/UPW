@@ -16,17 +16,17 @@ export function NavBrand() {
   };
 
   const className =
-    "flex items-center gap-3 pl-2 pr-3 sm:pr-4 py-1.5 rounded-full hover:bg-theme-btn-secondary-hover transition-all duration-200 group cursor-pointer shrink-0";
+    "flex items-center gap-3 pl-2 sm:pl-2.5 pr-3 sm:pr-4 py-1.5 sm:py-2 rounded-full hover:bg-theme-btn-secondary-hover transition-all duration-200 group cursor-pointer shrink-0";
 
   const content = (
     <>
       {/* Photo Avatar Thumbnail with Animated Status Radar */}
-      <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-theme-avatar shrink-0 bg-theme-avatar shadow-xs">
+      <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border border-theme-avatar shrink-0 bg-theme-avatar shadow-xs">
         <Image
           src="/bg/profilephoto2.png"
           alt="Getabalew Kemaw"
           fill
-          sizes="40px"
+          sizes="44px"
           className="object-cover object-top group-hover:scale-110 transition-transform duration-300"
         />
         {/* Animated Live Availability Indicator */}
@@ -38,10 +38,10 @@ export function NavBrand() {
 
       {/* GK Monogram Brand Name - Enriched Font Sizes */}
       <span className="flex items-baseline gap-1.5 font-mono select-none">
-        <span className="font-bold text-lg sm:text-xl tracking-tight text-theme-primary group-hover:text-theme-primary transition-colors">
+        <span className="font-bold text-xl sm:text-2xl tracking-tight text-theme-primary group-hover:text-theme-primary transition-colors">
           GK
         </span>
-        <span className="text-xs sm:text-sm text-theme-muted hidden sm:inline font-sans font-medium tracking-normal">
+        <span className="text-sm sm:text-[15px] text-theme-muted hidden sm:inline font-sans font-medium tracking-normal">
           · getabalew kemaw
         </span>
       </span>

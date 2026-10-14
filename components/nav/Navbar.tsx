@@ -18,7 +18,7 @@ export function Navbar() {
       setScrolled(window.scrollY > 15);
 
       // Section tracker for synchronized active highlighting
-      const sections = ["overview", "projects", "experience"];
+      const sections = ["overview", "projects", "engineering", "experience"];
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el) {
@@ -50,7 +50,7 @@ export function Navbar() {
         <NavBrand />
 
         {/* Divider before desktop links */}
-        <span className="w-px h-5 bg-theme-muted/20 shrink-0 hidden md:inline" />
+        <span className="w-px h-6 sm:h-7 bg-theme-muted/20 shrink-0 hidden md:inline" />
 
         {/* Center: Gliding Spotlight Nav Links (Desktop) */}
         <div className="hidden md:flex items-center">
@@ -58,7 +58,7 @@ export function Navbar() {
         </div>
 
         {/* Divider before controls */}
-        <span className="w-px h-5 bg-theme-muted/20 shrink-0" />
+        <span className="w-px h-6 sm:h-7 bg-theme-muted/20 shrink-0" />
 
         {/* Theme Switcher (Lucide Sun/Moon with Circular Ripple) */}
         <div className="shrink-0 pl-0.5">
@@ -79,22 +79,22 @@ export function Navbar() {
           }}
           aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={mobileOpen}
-          className="md:hidden relative w-9 h-9 sm:w-10 sm:h-10 flex flex-col items-center justify-center gap-1.5 rounded-full hover:bg-theme-btn-secondary-hover transition-colors cursor-pointer select-none"
+          className="md:hidden relative w-10 h-10 sm:w-11 sm:h-11 flex flex-col items-center justify-center gap-1.5 rounded-full hover:bg-theme-btn-secondary-hover transition-colors cursor-pointer select-none"
         >
           <span
-            className={`w-4 sm:w-5 h-[2px] rounded-full transition-all duration-300 ease-out origin-center ${
+            className={`w-4.5 sm:w-5 h-[2px] rounded-full transition-all duration-300 ease-out origin-center ${
               mobileOpen ? "rotate-45 translate-y-[8px]" : ""
             }`}
             style={{ backgroundColor: "var(--text-primary)" }}
           />
           <span
-            className={`w-4 sm:w-5 h-[2px] rounded-full transition-all duration-200 ease-out ${
+            className={`w-4.5 sm:w-5 h-[2px] rounded-full transition-all duration-200 ease-out ${
               mobileOpen ? "opacity-0 scale-75" : "opacity-100"
             }`}
             style={{ backgroundColor: "var(--text-primary)" }}
           />
           <span
-            className={`w-4 sm:w-5 h-[2px] rounded-full transition-all duration-300 ease-out origin-center ${
+            className={`w-4.5 sm:w-5 h-[2px] rounded-full transition-all duration-300 ease-out origin-center ${
               mobileOpen ? "-rotate-45 -translate-y-[8px]" : ""
             }`}
             style={{ backgroundColor: "var(--text-primary)" }}

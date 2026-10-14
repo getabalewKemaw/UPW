@@ -79,3 +79,34 @@ export interface BookingTier {
   deliverables: string[];
 }
 
+export interface ServiceDeliveryStep {
+  step: string;
+  title: string;
+  subtitle: string;
+  tag: string;
+  description: string;
+  keyPoints: string[];
+  icon: "call" | "pricing" | "agile";
+}
+
+export interface EngineeringImpact {
+  problem: string;
+  decision: string;
+  implementation: string;
+  validation: string;
+  outcome: string;
+}
+
+export interface EngineeringPillar {
+  id: string;
+  number: string;
+  title: string;
+  category: string;
+  subtitle: string;
+  summary: string;
+  technologies: string[];
+  metrics: string[];
+  impact: EngineeringImpact;
+  deepDivePoints: string[];
+}
+

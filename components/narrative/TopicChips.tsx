@@ -14,7 +14,9 @@ export function TopicChips() {
 
   return (
     <div className="leading-loose flex flex-wrap items-center gap-x-2.5 gap-y-3">
-      <span className="shrink-0 theme-level-4">Architecting and shipping across</span>
+      <span className="shrink-0 theme-level-4 font-medium text-theme-primary">
+        What I bring:
+      </span>
 
       {TOPIC_CHIPS.map((chip, index) => (
         <button
@@ -31,14 +33,6 @@ export function TopicChips() {
           {chip.label}
         </button>
       ))}
-
-      {/* High-impact chip as highlighted in design */}
-      <span
-        style={{ transitionDelay: `${TOPIC_CHIPS.length * 35}ms` }}
-        className="inline-block bg-theme-chip-highlight text-theme-chip-highlight px-4.5 py-1.5 rounded-[4px] text-lg sm:text-xl md:text-2xl font-normal transition-all duration-300 theme-level-4"
-      >
-        and your next big idea.
-      </span>
     </div>
   );
 }

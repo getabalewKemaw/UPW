@@ -474,6 +474,36 @@ a, button {
   animation: hatch-border-flow 8s linear infinite;
 }
 
+.process-card-animated-border {
+  border: 3px solid transparent !important;
+  background-image:
+    linear-gradient(var(--bg-main), var(--bg-main)),
+    var(--hatch-text-gradient) !important;
+  background-origin: border-box !important;
+  -webkit-background-clip: padding-box, border-box !important;
+  background-clip: padding-box, border-box !important;
+  background-size: 100% 100%, 60px 60px !important;
+  animation: hatch-border-flow 6s linear infinite !important;
+}
+
+.process-card-idle {
+  border: 2.5px solid var(--border-color);
+  background-color: var(--bg-main);
+  transition: all 0.25s ease;
+}
+
+.process-card-idle:hover {
+  border: 3px solid transparent !important;
+  background-image:
+    linear-gradient(var(--bg-main), var(--bg-main)),
+    var(--hatch-text-gradient) !important;
+  background-origin: border-box !important;
+  -webkit-background-clip: padding-box, border-box !important;
+  background-clip: padding-box, border-box !important;
+  background-size: 100% 100%, 60px 60px !important;
+  animation: hatch-border-flow 6s linear infinite !important;
+}
+
 .hatch-animated-input-border {
   border: 3px solid transparent !important;
   background-image:

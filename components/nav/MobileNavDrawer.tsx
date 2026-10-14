@@ -23,7 +23,8 @@ export function MobileNavDrawer({
   const pathname = usePathname();
   const isAboutPage = pathname === "/about";
   const isServicesPage = pathname === "/services" || pathname === "/service";
-  const isSubPage = isAboutPage || isServicesPage;
+  const isEngineeringPage = pathname === "/engineering";
+  const isSubPage = isAboutPage || isServicesPage || isEngineeringPage;
   const drawerRef = useRef<HTMLDivElement>(null);
 
   // Close on Escape or click outside
@@ -53,11 +54,11 @@ export function MobileNavDrawer({
   return (
     <div
       ref={drawerRef}
-      className="hatch-animated-border md:hidden mt-2.5 w-72 sm:w-80 rounded-2xl p-3 flex flex-col gap-1.5 shadow-[0_16px_40px_rgba(0,0,0,0.18)] dark:shadow-[0_16px_48px_rgba(0,0,0,0.7)] transition-all duration-300 animate-in fade-in slide-in-from-top-3"
+      className="hatch-animated-border md:hidden mt-2.5 w-76 sm:w-84 rounded-2xl p-3.5 flex flex-col gap-2 shadow-[0_16px_40px_rgba(0,0,0,0.18)] dark:shadow-[0_16px_48px_rgba(0,0,0,0.7)] transition-all duration-300 animate-in fade-in slide-in-from-top-3"
       role="menu"
       aria-label="Mobile Navigation"
     >
-      <div className="px-3 py-1.5 text-xs font-mono uppercase tracking-wider text-theme-muted opacity-70 border-b border-theme/40 mb-1">
+      <div className="px-3.5 py-2 text-xs sm:text-sm font-mono uppercase tracking-wider text-theme-muted opacity-75 border-b border-theme/40 mb-1">
         Navigation
       </div>
 
@@ -68,9 +69,9 @@ export function MobileNavDrawer({
 
         const innerContent = (
           <>
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-3">
               <span
-                className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
                   isActive
                     ? "bg-emerald-500 scale-100 shadow-[0_0_8px_rgba(16,185,129,0.8)]"
                     : "bg-transparent scale-50 opacity-0 group-hover:opacity-40 group-hover:bg-theme-muted"
@@ -80,16 +81,16 @@ export function MobileNavDrawer({
             </div>
 
             {item.isExternal ? (
-              <ArrowUpRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              <ArrowUpRight className="w-4.5 h-4.5 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
             ) : isActive ? (
-              <span className="text-[11px] font-mono uppercase px-2 py-0.5 rounded-md bg-theme-page text-theme-primary border border-theme">
+              <span className="text-xs font-mono uppercase px-2.5 py-1 rounded-md bg-theme-page text-theme-primary border border-theme">
                 Active
               </span>
             ) : null}
           </>
         );
 
-        const className = `group flex items-center justify-between px-3.5 py-2.5 rounded-xl text-base sm:text-[17px] font-medium transition-all duration-200 cursor-pointer ${
+        const className = `group flex items-center justify-between px-4 py-3 rounded-xl text-base sm:text-lg font-medium transition-all duration-200 cursor-pointer ${
           isActive
             ? "bg-theme-btn-secondary-hover text-theme-primary font-semibold"
             : "text-theme-muted hover:text-theme-primary hover:bg-theme-btn-secondary-hover/70"

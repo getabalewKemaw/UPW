@@ -1,9 +1,9 @@
 // EmailJS Configuration
 // Credentials read directly from environment variables (.env / .env.local):
 export const EMAILJS_CONFIG = {
-  serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_1dhnxqb",
-  templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_7n3b4og",
-  publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "uDZZcup1XUokQjBBb",
+  serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+  templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+  publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
 };
 
 export const isEmailJSConfigured = (): boolean => {

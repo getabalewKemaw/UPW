@@ -30,14 +30,14 @@ export function SoundToggle({ className = "" }: SoundToggleProps) {
       aria-label={enabled ? "Mute audio sound effects" : "Enable audio sound effects"}
       aria-pressed={enabled}
       title={enabled ? "Mute UI sound effects" : "Enable UI sound effects"}
-      className={`relative w-[32px] sm:w-[36px] h-[30px] sm:h-[32px] rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 hover:bg-theme-btn-secondary-hover ${
+      className={`relative w-[36px] sm:w-[38px] h-[34px] sm:h-[36px] rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 hover:bg-theme-btn-secondary-hover ${
         enabled ? "text-theme-primary" : "text-theme-muted hover:text-theme-primary"
       } ${className}`}
     >
       {enabled ? (
-        <Volume2 className="w-4 h-4 sm:w-[17px] sm:h-[17px] transition-transform duration-200 hover:scale-110 text-emerald-500 dark:text-emerald-400" />
+        <Volume2 className="w-[17px] h-[17px] sm:w-[19px] sm:h-[19px] transition-transform duration-200 hover:scale-110 text-emerald-500 dark:text-emerald-400" />
       ) : (
-        <VolumeX className="w-4 h-4 sm:w-[17px] sm:h-[17px] transition-transform duration-200 opacity-60 hover:opacity-100" />
+        <VolumeX className="w-[17px] h-[17px] sm:w-[19px] sm:h-[19px] transition-transform duration-200 opacity-60 hover:opacity-100" />
       )}
     </button>
   );

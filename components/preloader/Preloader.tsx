@@ -10,22 +10,22 @@ interface PreloaderProps {
 const PHASES = [
   {
     step: "01",
-    tagline: "COMMAND CENTER // INTRODUCING",
-    headline: "MEET THE ENGINEER",
-    telemetry: "KERNEL: READY · STACK: NEXT.JS / PYTHON / FASTAPI",
+    tagline: "INTRODUCING",
+    headline: "GETABALEW KEMAW",
+    telemetry: "FULL-STACK SOFTWARE ENGINEER",
   },
   {
     step: "02",
-    tagline: "SPECIALIZATION // ARCHITECTURE",
-    headline: "AI & PRODUCTION SYSTEMS",
-    telemetry: "PGVECTOR: ACTIVE · HYBRID SEARCH RAG: ONLINE",
+    tagline: "CORE DISCIPLINES",
+    headline: "WEB · BACKEND · QA · DEVOPS · AI",
+    telemetry: "DESIGN · BUILD · TEST · DEPLOY",
   },
   {
     step: "03",
-    tagline: "PORTFOLIO // INITIALIZED",
+    tagline: "PORTFOLIO INITIALIZED",
     headline: "GK",
     subtext: "GETABALEW KEMAW",
-    telemetry: "SYSTEMS NOMINAL · LATENCY: 9ms · REVEALING COMMAND CENTER",
+    telemetry: "REVEALING WORKSPACE",
   },
 ];
 
@@ -47,7 +47,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
         // storage unavailable
       }
       onComplete?.();
-    }, 650);
+    }, 450);
   }, [onComplete]);
 
   // Client-only mount detection and sessionStorage check to ensure 100% SSR hydration match
@@ -66,9 +66,9 @@ export function Preloader({ onComplete }: PreloaderProps) {
   useEffect(() => {
     if (!mounted || isFinished) return;
 
-    // Smooth Progress Interpolation (0 -> 100% over 14.8 seconds)
+    // Fast, slick progress interpolation (0 -> 100% over 2.4 seconds)
     const startTime = performance.now();
-    const duration = 14800;
+    const duration = 2400;
 
     const progressInterval = setInterval(() => {
       const elapsed = performance.now() - startTime;
@@ -78,12 +78,12 @@ export function Preloader({ onComplete }: PreloaderProps) {
       if (pct >= 100) {
         clearInterval(progressInterval);
       }
-    }, 40);
+    }, 20);
 
-    // 5.0 Seconds per phase (15.0 seconds total showcase duration)
-    const t1 = setTimeout(() => setPhaseIndex(1), 5000);
-    const t2 = setTimeout(() => setPhaseIndex(2), 10000);
-    const tExit = setTimeout(() => dismiss(), 15000);
+    // 800ms per phase (2.4 seconds total duration)
+    const t1 = setTimeout(() => setPhaseIndex(1), 800);
+    const t2 = setTimeout(() => setPhaseIndex(2), 1600);
+    const tExit = setTimeout(() => dismiss(), 2400);
 
     // Keyboard dismissal on Escape
     const handleKeyDown = (e: KeyboardEvent) => {

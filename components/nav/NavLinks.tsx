@@ -15,10 +15,11 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
   const pathname = usePathname();
   const isAboutPage = pathname === "/about";
   const isServicesPage = pathname === "/services" || pathname === "/service";
-  const isSubPage = isAboutPage || isServicesPage;
+  const isEngineeringPage = pathname === "/engineering";
+  const isSubPage = isAboutPage || isServicesPage || isEngineeringPage;
 
   const [internalActiveId, setInternalActiveId] = useState<string>(
-    isAboutPage ? "about" : isServicesPage ? "services" : "overview"
+    isAboutPage ? "about" : isServicesPage ? "services" : isEngineeringPage ? "engineering" : "overview"
   );
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [pillRect, setPillRect] = useState<{ left: number; width: number } | null>(null);
@@ -30,6 +31,8 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
     ? "about"
     : isServicesPage
     ? "services"
+    : isEngineeringPage
+    ? "engineering"
     : (propActiveId ?? internalActiveId);
 
   const updatePill = useCallback(() => {
@@ -63,7 +66,7 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
   useEffect(() => {
     if (isSubPage) return;
     if (propActiveId) return; // parent controlled
-    const sections = ["overview", "projects", "experience", "contact"];
+    const sections = ["overview", "projects", "engineering", "experience", "contact"];
     const handleScroll = () => {
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
@@ -93,7 +96,7 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
     <div
       ref={containerRef}
       onMouseLeave={() => setHoveredId(null)}
-      className="relative flex items-center p-1 rounded-full select-none"
+      className="relative flex items-center p-1 rounded-full select-none gap-0.5 sm:gap-1"
     >
       {/* Gliding Spotlight Magnetic Pill with Visible Theme Styling */}
       {pillRect && (
@@ -110,7 +113,7 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
       {NAV_ITEMS.map((item) => {
         const isActive = activeId === item.id;
         const isHovered = hoveredId === item.id;
-        const className = `relative z-10 px-3 md:px-3.5 lg:px-4 py-1.5 text-sm sm:text-[15px] font-medium transition-all duration-200 rounded-full whitespace-nowrap flex items-center gap-1.5 cursor-pointer active:scale-95 ${
+        const className = `relative z-10 px-3.5 md:px-4 lg:px-5 py-2 text-[15px] sm:text-base md:text-[16px] lg:text-[17px] font-medium tracking-tight transition-all duration-200 rounded-full whitespace-nowrap flex items-center gap-2 cursor-pointer active:scale-95 ${
           isActive
             ? "text-theme-primary font-semibold"
             : isHovered
@@ -124,7 +127,7 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
               {item.label}
             </span>
             {isActive && (
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 shadow-[0_0_6px_rgba(16,185,129,0.8)]" />
+              <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.85)]" />
             )}
           </>
         );
