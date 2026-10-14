@@ -1,4 +1,4 @@
-import { ServiceItem, BookingTier } from "@/types/portfolio";
+import { ServiceItem, BookingTier, ServiceDeliveryStep } from "@/types/portfolio";
 
 export const SERVICES_LIST: ServiceItem[] = [
   {
@@ -193,3 +193,51 @@ export const BOOKING_TIERS: BookingTier[] = [
     ],
   },
 ];
+
+export const SERVICE_DELIVERY_STEPS: ServiceDeliveryStep[] = [
+  {
+    step: "01",
+    title: "Call to Understand What You Want",
+    subtitle: "Direct Discovery & Needs Assessment",
+    tag: "Discovery Session",
+    description:
+      "We begin with a focused, one-on-one call to deeply listen to your project vision, target users, business objectives, and technical constraints. I help clarify ambiguous requirements, prioritize core features, and define what real success looks like without confusing technical jargon.",
+    keyPoints: [
+      "Direct consultation with < 15 min reply time",
+      "Feature scoping, user journey mapping & MVP definition",
+      "Architecture recommendations tailored to your goals",
+    ],
+    icon: "call",
+  },
+  {
+    step: "02",
+    title: "Affordable Pricing Agreement",
+    subtitle: "Transparent Milestones & Fixed Scope",
+    tag: "Transparent Terms",
+    description:
+      "After requirements are mapped, I provide an affordable, budget-conscious proposal tailored to your scale. We agree on clear milestone deliverables, transparent timelines, and fixed pricing with zero hidden fees, ensuring you stay in total financial control before work begins.",
+    keyPoints: [
+      "Fair, predictable pricing tailored to your scale",
+      "Milestone-based payments tied directly to tangible progress",
+      "Written scope agreement with zero unexpected extras",
+    ],
+    icon: "pricing",
+  },
+  {
+    step: "03",
+    title: "Agile Delivery & Rapid Shipping",
+    subtitle: "Iterative Sprints & Complete Training",
+    tag: "Agile Methodology",
+    description:
+      "We build and deliver using Agile methodology across focused 1-to-2 week sprints. You receive interactive live demo deployments, frequent progress check-ins, and fast feedback loops. Upon delivery, I conduct complete hands-on team training so you operate your new software effortlessly.",
+    keyPoints: [
+      "1- to 2-week Agile sprints with testable live demo links",
+      "Real-time feedback loops via direct Telegram or Slack",
+      "Complete hands-on software training & documentation included",
+    ],
+    icon: "agile",
+  },
+];
+
+export { CONTACT_EMAIL } from "./portfolio-data";
+

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { SERVICES_LIST } from "@/data/services-data";
 import { ServicesHero } from "./ServicesHero";
+import { ServiceDeliveryProcess } from "./ServiceDeliveryProcess";
 import { ServiceCard } from "./ServiceCard";
 import { AppointmentBookingSection } from "./AppointmentBookingSection";
 import { ServicesFAQ } from "./ServicesFAQ";
@@ -27,13 +28,16 @@ export function ServicesPageView() {
         ))}
       </section>
 
-      {/* 3. Interactive Technical Talk & Appointment Booking Engine */}
+      {/* 3. Universal Service Delivery Process (Call -> Affordable Agreement -> Agile Sprints) */}
+      <ServiceDeliveryProcess />
+
+      {/* 4. Interactive Technical Talk & Appointment Booking Engine */}
       <AppointmentBookingSection
         selectedTierId={selectedBookingTierId}
         onSelectTier={(tierId) => setSelectedBookingTierId(tierId)}
       />
 
-      {/* 4. Frequently Answered Questions */}
+      {/* 5. Frequently Answered Questions */}
       <ServicesFAQ />
     </div>
   );

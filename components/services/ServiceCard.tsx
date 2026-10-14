@@ -65,8 +65,9 @@ export function ServiceCard({
             </span>
           </div>
 
-          <span className="text-xs font-mono text-emerald-500 font-medium tracking-wide pt-0.5">
-            ⚡ &lt; 15 Min Direct Response
+          <span className="text-xs font-mono text-theme-muted font-medium tracking-wide pt-0.5 flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-theme-primary/70 inline-block" />
+            <span>&lt; 15 Min Direct Response</span>
           </span>
         </div>
 
@@ -103,12 +104,12 @@ export function ServiceCard({
         {/* Client Quality & Training Callout (Clean Tint, No Harsh Borders) */}
         {service.trainingAndQuality && (
           <div className="p-4 sm:p-5 rounded-[4px] bg-theme-chip/50 flex items-start gap-3.5 w-full">
-            <div className="flex items-center gap-1.5 shrink-0 mt-0.5 text-emerald-500">
+            <div className="flex items-center gap-1.5 shrink-0 mt-0.5 text-theme-primary">
               <ShieldCheck className="w-5 h-5 shrink-0" />
               <GraduationCap className="w-5 h-5 shrink-0" />
             </div>
             <div className="flex flex-col gap-0.5 text-left items-start">
-              <span className="text-xs font-mono uppercase tracking-wider text-emerald-500 font-bold">
+              <span className="text-xs font-mono uppercase tracking-wider text-theme-primary font-semibold">
                 Quality & Software Training Guarantee:
               </span>
               <p className="text-base sm:text-lg font-light text-theme-primary leading-relaxed">
@@ -129,7 +130,7 @@ export function ServiceCard({
                 key={idx}
                 className="flex items-start gap-3.5 text-xl sm:text-2xl font-light text-theme-narrative leading-relaxed"
               >
-                <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-1.5 shrink-0 opacity-90" />
+                <CheckCircle2 className="w-5 h-5 text-theme-primary mt-1.5 shrink-0 opacity-80" />
                 <span>{renderHighlightedText(item)}</span>
               </li>
             ))}
@@ -142,7 +143,7 @@ export function ServiceCard({
             <div className="flex items-center gap-2 text-xs sm:text-sm font-mono text-theme-muted">
               <span>Engineered with:</span>
               {activeTech && (
-                <span className="text-emerald-500 font-semibold font-mono">
+                <span className="text-theme-primary font-semibold font-mono">
                   ({activeTech})
                 </span>
               )}

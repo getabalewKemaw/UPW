@@ -72,14 +72,14 @@ export function ServicesHero() {
 
             {/* Floating Top Status Badge */}
             <div className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-[4px] bg-black/70 backdrop-blur-md text-white text-xs font-mono">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-white/80 animate-pulse" />
               <span>Addis Ababa (UTC+3) · Remote Worldwide</span>
             </div>
 
             {/* Bottom Floating Info Pill */}
             <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono text-white/90 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-lg">
               <span>Timezones: US · UK · EU · Dubai</span>
-              <span className="text-emerald-400 font-semibold">&lt; 15m reply</span>
+              <span className="text-white/80 font-medium">&lt; 15m reply</span>
             </div>
           </div>
         </div>
@@ -90,8 +90,8 @@ export function ServicesHero() {
         <div className="flex flex-wrap items-center gap-3">
           <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-[4px] text-sm sm:text-base font-mono bg-theme-chip text-theme-primary">
             <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-theme-primary opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-theme-primary" />
             </span>
             <span>Available for new projects, workshops & talks</span>
           </div>

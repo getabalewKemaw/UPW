@@ -3,6 +3,11 @@
 
 const FAQS = [
   {
+    question: "How does your service delivery process work from start to finish?",
+    answer:
+      "All services follow a structured 3-step delivery workflow: (1) Discovery Call — We start with a focused call to deeply understand what you want, your target users, and technical goals. (2) Affordable Pricing Agreement — We establish a clear, milestone-based budget with zero hidden fees, so you pay only as real progress is delivered. (3) Agile Delivery — We build in rapid 1-to-2 week Agile sprints with interactive live demos, fast feedback loops, and complete hands-on team software training upon launch.",
+  },
+  {
     question: "Do you also teach complete beginners, or only experienced engineers?",
     answer:
       "Yes! I teach complete beginners from the ground up. As an active instructor at AllCan Technologies, I train students starting from foundational programming logic, Git version control, and modern JavaScript/TypeScript, guiding them step-by-step through building and deploying their first scalable full-stack applications with clear, structured milestones.",
