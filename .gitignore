@@ -53,3 +53,7 @@ next-env.d.ts
 
 
 skills-lock.json
+
+# scratch & temp
+scratch/
+scratch_*

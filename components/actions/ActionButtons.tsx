@@ -72,6 +72,15 @@ export function ActionButtons() {
         <span>About me</span>
       </Link>
 
+      <Link
+        href="/engineering"
+        onClick={() => sound.playClick()}
+        style={{ transitionDelay: "125ms" }}
+        className="inline-flex items-center gap-2.5 border border-theme bg-theme-btn-secondary text-theme-btn-secondary hover:bg-theme-btn-secondary-hover px-6 py-3 rounded-[3px] text-base sm:text-lg md:text-xl font-normal transition-colors cursor-pointer theme-level-6"
+      >
+        <span>Engineering</span>
+      </Link>
+
       <a
         href="#projects"
         style={{ transitionDelay: "135ms" }}
