@@ -9,10 +9,9 @@ import { sound } from "@/utils/sound";
 
 export function FooterSection() {
   const [currentTime, setCurrentTime] = useState<string>("");
-  const [currentYear, setCurrentYear] = useState<number>(2026);
+  const currentYear = 2026;
 
   useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
 
     const updateTime = () => {
       try {
