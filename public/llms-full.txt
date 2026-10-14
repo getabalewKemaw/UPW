@@ -2,6 +2,12 @@
 
 > Comprehensive technical reference for Large Language Models (LLMs), AI crawlers, and technical evaluators. Details system architecture, engineering trade-offs, production case studies, testing methodology, and service delivery workflows.
 
+## SEO, Search Aliases & Indexing Keywords
+- **Name Variations**: Getabalew, Getabalew Kemaw, Getabalee, getabalewkema, GetabalewKemaw, Getabalew K.
+- **Role Keywords**: Full-Stack Developer, Fullstack Developer in Ethiopia, Software Engineer in Ethiopia, Senior Software Engineer Addis Ababa, Fullstack Web Developer, Backend Engineer Ethiopia, Mobile App Developer Ethiopia, AI Engineer Ethiopia.
+- **Specializations**: Next.js Developer, React Developer, TypeScript Specialist, Python FastAPI Backend, Spring Boot Java, PostgreSQL Database Optimization, Chapa Payment Gateway Integration, Telebirr API Integration, Stripe Developer, Playwright QA Automation, Docker DevOps, Hybrid Vector Search & RAG.
+- **Hiring & Market Queries**: Hire Software Engineer in Ethiopia, Top Fullstack Developer in Ethiopia, Remote Software Developer US UK EU Dubai, Ethiopian Software Consultant, AllCan Tech Instructor & Developer.
+
 ## Executive Summary
 Getabalew Kemaw is an Addis Ababa-based Full-Stack Software Engineer, Instructor at AllCan Tech, and builder specializing in production web applications, distributed backend architectures, test automation, and applied AI systems. He works with startups, agencies, and founders worldwide across US, UK, EU, and Dubai timezones, and is open to remote roles worldwide as well as relocation.
 
@@ -18,6 +24,52 @@ Getabalew Kemaw is an Addis Ababa-based Full-Stack Software Engineer, Instructor
 2. **Database Performance First**: Most slow applications do not require expensive hardware upgrades; they require proper B-tree indexes, composite indexes, query plan analysis, and selective caching.
 3. **Automated Quality Gates**: Code is not production-ready until automated end-to-end tests prevent regressions from reaching users on every pull request.
 4. **Transparent Client Delivery**: Complex technical solutions explained in plain business language, paired with milestone-based agreements, rapid 1-to-2 week Agile demo sprints, and hands-on client team software training.
+
+## 5 Core Engineering Services (Detailed Deliverables)
+
+### 1. Custom Software Solutions (Web Apps & Rock-Solid Systems)
+- **Overview**: Custom full-stack web applications tailored to exact business needs, designed for effortless team usability and engineered with uncompromising quality.
+- **Key Deliverables**:
+  - Full-stack web applications with clean, effortless UI/UX anyone on your team can operate without confusion.
+  - Rock-solid database architectures with ACID transactional guarantees and sub-15ms query response times.
+  - Zero-downtime automated deployments with continuous Playwright automated QA regression blockers.
+  - Complete software training & documentation included so staff operate the platform with total confidence.
+- **Tech Stack**: Next.js, React, TypeScript, Node.js, PostgreSQL, Spring Boot, Python FastAPI, Docker, Redis.
+
+### 2. Business Automation & Workflow Engines (Operations & Payments)
+- **Overview**: Custom workflow automation eliminating repetitive manual tasks. Direct one-click payment gateway integrations, automated customer orders, invoices, and accounting.
+- **Key Deliverables**:
+  - Automated orders, billing, and accounting pipelines eliminating manual headaches.
+  - Secure payment gateway integrations: **Chapa**, **Telebirr**, and **Stripe** with cryptographic HMAC webhook validation.
+  - Self-healing error detection with instant alert notifications dispatched to Telegram or Slack.
+  - Hands-on staff training and video walkthroughs ensuring quick adoption.
+- **Tech Stack**: Chapa Payment Gateway, Telebirr API, Stripe API, Apache Kafka, Redis, PostgreSQL, Webhooks.
+
+### 3. Mobile Application Development (iOS & Android)
+- **Overview**: Custom cross-platform mobile apps for iOS and Android with 60fps native fluidity and offline-first resilience.
+- **Key Deliverables**:
+  - Native iOS & Android apps engineered for high performance, intuitive usability, and beautiful design.
+  - Offline-first data caching and synchronization ensuring zero app freezes during poor connectivity.
+  - Biometric authentication (FaceID / Fingerprint) and push notification messaging.
+  - Administrative dashboard training and app store release management guidance.
+- **Tech Stack**: React Native, Expo, TypeScript, SQLite, RESTful APIs, Tailwind CSS.
+
+### 4. Software Training & Engineering Mentorship (Beginner to Mid-Level)
+- **Overview**: Patient, personalized software coaching from foundational programming up to real-world production architectures.
+- **Key Deliverables**:
+  - Structured coaching roadmaps for **complete beginners** starting from coding logic up to live deployments.
+  - Line-by-line pull request code reviews teaching maintainable, bug-free architectural habits.
+  - Database performance masterclasses: PostgreSQL EXPLAIN query execution and indexing strategies.
+  - Career mentorship, interview prep, and portfolio building with real deployed applications.
+- **Instructor**: Active instructor at AllCan Technologies (https://allcan.tech).
+
+### 5. Technical Talks, Keynotes & Advisory (Workshops & Audits)
+- **Overview**: Pragmatic technical talks, team workshops, and strategic software advisory demystifying AI, RAG systems, and scalable system engineering.
+- **Key Deliverables**:
+  - Engaging keynotes and workshops on AI architectures, Retrieval-Augmented Generation, and production quality standards.
+  - Independent system architecture audits helping companies avoid expensive server overhead and over-engineered tools.
+  - Complete presentation slide decks and demo code repositories shared with attendees.
+- **Tech Stack**: Keynote Speaking, AI & Vector Search (RAG), Apache Kafka, Kubernetes, AWS, GCP.
 
 ## Detailed Case Studies
 
@@ -46,14 +98,9 @@ Getabalew Kemaw is an Addis Ababa-based Full-Stack Software Engineer, Instructor
 - **Architecture**: Multi-stage Docker builds separating build dependencies from production runtime images (< 100MB output). Reverse-proxied via Nginx with automated SSL renewal, automated GitHub Actions CI/CD, and zero-downtime rolling deploys with automated rollback probes.
 - **Outcome**: 99.9% consistent uptime, fast automated push-to-deploy cycle, and zero manual release overhead.
 
-## Services Offered
-1. **Custom Software Solutions**: Full-stack web platforms engineered with intuitive UX, sub-15ms backend response times, and complete staff software training.
-2. **Business Automation & Workflows**: Eliminating manual tasks with payment gateway integrations, order management, and notification pipelines.
-3. **Mobile App Development**: Cross-platform mobile applications with offline-first synchronization and native device performance.
-4. **Engineering & Architecture Mentorship**: Hands-on code reviews, query plan optimization workshops, and software delivery mentoring for beginner and mid-level developers.
-
 ## Contact Information
 - **Email**: getabalewkemaw@gmail.com
-- **Telegram**: https://t.me/GetabalewKemaw
+- **Telegram**: https://t.me/GetabalewKemaw (@GetabalewKemaw)
+- **Phone**: +251 905952906
 - **LinkedIn**: https://www.linkedin.com/in/getabalewkemaw/
 - **GitHub**: https://github.com/getabalewKemaw

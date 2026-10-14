@@ -1,14 +1,21 @@
 # Getabalew Kemaw — Full-Stack Software Engineer & AI Researcher
 
-> Full-Stack Software Engineer specializing in dependable web products, distributed backend systems, test automation, cloud infrastructure, and AI engineering (Hybrid Search & RAG). Based in Ethiopia · Open to remote opportunities worldwide (US, UK, EU, Dubai) and open to relocation.
+> Full-Stack Software Engineer specializing in dependable web products, distributed backend systems, business automation, test automation, cloud infrastructure, and AI engineering (Hybrid Search & RAG). Based in Ethiopia · Open to remote opportunities worldwide (US, UK, EU, Dubai) and open to relocation.
+
+## SEO, Search Aliases & Indexing Keywords
+- **Name Variations**: Getabalew, Getabalew Kemaw, Getabalee, getabalewkema, GetabalewKemaw, Getabalew K.
+- **Role Keywords**: Full-Stack Developer, Fullstack Developer in Ethiopia, Software Engineer in Ethiopia, Senior Software Engineer Addis Ababa, Fullstack Web Developer, Backend Engineer Ethiopia, Mobile App Developer Ethiopia, AI Engineer Ethiopia.
+- **Specializations**: Next.js Developer, React Developer, TypeScript Specialist, Python FastAPI Backend, Spring Boot Java, PostgreSQL Database Optimization, Chapa Payment Gateway Integration, Telebirr API Integration, Stripe Developer, Playwright QA Automation, Docker DevOps, Hybrid Vector Search & RAG.
+- **Hiring & Market Queries**: Hire Software Engineer in Ethiopia, Top Fullstack Developer in Ethiopia, Remote Software Developer US UK EU Dubai, Ethiopian Software Consultant, AllCan Tech Instructor & Developer.
 
 ## Quick Facts
 - **Name**: Getabalew Kemaw
 - **Current Role**: Full-Stack Instructor & Developer at AllCan Tech (https://allcan.tech)
 - **Location**: Addis Ababa, Ethiopia (UTC+3 / EAT)
-- **Work Preferences**: Remote Worldwide (US, UK, EU, Dubai) · Open to Relocation · Full-time & Advisory Contracts
+- **Work Preferences**: Remote Worldwide (US, UK, EU, Dubai overlapping hours) · Open to Relocation · Full-time & Advisory Contracts
 - **Email**: getabalewkemaw@gmail.com
 - **Telegram**: https://t.me/GetabalewKemaw (@GetabalewKemaw)
+- **Phone**: +251 905952906
 - **GitHub**: https://github.com/getabalewKemaw
 - **LinkedIn**: https://www.linkedin.com/in/getabalewkemaw/
 
@@ -19,14 +26,41 @@
 4. **DevOps & Cloud Deployments**: Docker, Kubernetes, Nginx, Linux, GitHub Actions, AWS, Google Cloud, zero-downtime rolling deployments, health probe telemetry.
 5. **AI Engineering & RAG**: Hybrid search retrieval, PostgreSQL pgvector, embedding pipelines, semantic similarity, Retrieval-Augmented Generation, localized document search.
 
-## Navigation & Site Routes
-- Home Page (/): Professional overview, 5 targeted production case studies, engineering timeline, and direct communication console.
-- Engineering Deep Dives (/engineering): Practical architectural decisions, database query optimizations, automated test suites, minimal containerization, and business outcomes without hype.
-- Services & Booking (/services): Custom software solutions, business automation, mobile applications, engineering mentorship, 3-step delivery workflow, and direct appointment scheduling.
-- About (/about): Engineering background, AllCan Tech instructional work, craftsmanship philosophy, and story.
-- Exhaustive Architecture Index (/llms-full.txt): Complete technical breakdown of architectural patterns, system case studies, and service specifications.
+## 5 Core Engineering Services (Detailed Deliverables)
+1. **Custom Software Solutions** (Web Apps & Rock-Solid Systems):
+   - Intuitive full-stack web applications with clean, effortless interfaces tailored to business needs.
+   - Robust database architectures with ACID transactional guarantees and sub-15ms response times.
+   - Zero-downtime automated deployments with continuous QA regression blockers.
+   - Complete hands-on software training & documentation included so staff operate the platform with ease.
+   - *Tech*: Next.js, React, TypeScript, Node.js, PostgreSQL, Spring Boot, Python FastAPI, Docker, Redis.
 
-## 5 Production Case Studies
+2. **Business Automation & Workflow Engines** (Operations & Payments):
+   - Automated handling of customer orders, invoices, billing, and accounting without repetitive manual work.
+   - Secure payment gateway integrations: **Chapa**, **Telebirr**, and **Stripe** with cryptographic HMAC webhook validation.
+   - Self-healing error detection with real-time alert notifications dispatched to Telegram or Slack.
+   - Complete video walkthroughs and staff training sessions included.
+   - *Tech*: Chapa Payment Gateway, Telebirr API, Stripe API, Apache Kafka, Redis, PostgreSQL, Webhooks.
+
+3. **Mobile Application Development** (iOS & Android):
+   - Native-performance mobile apps with 60fps fluidity and clean, intuitive interfaces.
+   - Offline-first data caching and synchronization ensuring zero app freezes during poor connectivity.
+   - Push notifications, biometric FaceID / fingerprint authentication, and camera integrations.
+   - Administrative dashboard training and app store release guidance.
+   - *Tech*: React Native, Expo, TypeScript, SQLite, RESTful APIs, Tailwind CSS.
+
+4. **Software Training & Engineering Mentorship** (Beginner to Mid-Level):
+   - Patient, structured coaching for **complete beginners** starting from coding fundamentals to production deployments.
+   - In-depth line-by-line pull request code reviews teaching maintainable, bug-free architectural habits.
+   - PostgreSQL EXPLAIN query plan masterclasses and indexing performance optimization.
+   - Career mentorship, interview prep, and portfolio building with deployed production projects.
+   - *Taught by*: Active instructor at AllCan Technologies (https://allcan.tech).
+
+5. **Technical Talks, Keynotes & Advisory** (Workshops & Audits):
+   - Interactive keynotes and workshops on AI architectures, Retrieval-Augmented Generation (RAG), and scalable backends.
+   - Independent system architecture audits helping teams avoid expensive server overhead and over-engineered tools.
+   - Complete slide decks, architecture diagrams, and working code repositories provided.
+
+## 5 Featured Production Case Studies
 1. **Real-Time Distributed Telemetry Engine**: High-throughput telemetry pipeline aggregating metrics with sub-15ms query response times using PostgreSQL partitioning and Redis memory buffers.
 2. **ACID Transactional Payment Engine**: Secure multi-gateway payment processing (Chapa, Telebirr, Stripe) with cryptographic HMAC webhook validation and idempotent ledger state transitions preventing double-charges.
 3. **Hybrid Vector RAG Search Platform**: Dual-mode semantic search combining lexical BM25 and pgvector embeddings for grounded, hallucination-free document retrieval.
@@ -38,3 +72,10 @@ All engagements follow a transparent 3-step workflow:
 1. **Discovery Scoping Call**: Direct 1-on-1 consultation (< 15 min reply time) to clarify requirements and map milestones without technical jargon.
 2. **Affordable Pricing Agreement**: Predictable, milestone-backed budget with fixed scope and zero hidden fees.
 3. **Agile Delivery & Rapid Shipping**: 1-to-2 week Agile sprints with testable live demo deployments, fast Telegram/Slack feedback loops, and complete hands-on team software training.
+
+## Navigation & Site Routes
+- Home Page (/): Professional overview, 5 targeted production case studies, engineering timeline, and direct communication console.
+- Engineering Deep Dives (/engineering): Practical architectural decisions, database query optimizations, automated test suites, minimal containerization, and business outcomes without hype.
+- Services & Booking (/services): Custom software solutions, business automation, mobile applications, engineering mentorship, 3-step delivery workflow, and direct appointment scheduling.
+- About (/about): Engineering background, AllCan Tech instructional work, craftsmanship philosophy, and story.
+- Exhaustive Architecture Index (/llms-full.txt): Complete technical breakdown of architectural patterns, system case studies, and service specifications.
