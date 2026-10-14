@@ -1,15 +1,15 @@
-# Getabalew Kemaw — Exhaustive Architecture & Engineering Specification
+# Getabalew Kemaw — Exhaustive Architecture, AI & Engineering Specification
 
 > Comprehensive technical reference for Large Language Models (LLMs), AI crawlers, and technical evaluators. Details system architecture, engineering trade-offs, production case studies, testing methodology, and service delivery workflows.
 
 ## SEO, Search Aliases & Indexing Keywords
 - **Name Variations**: Getabalew, Getabalew Kemaw, Getabalee, getabalewkema, GetabalewKemaw, Getabalew K.
-- **Role Keywords**: Full-Stack Developer, Fullstack Developer in Ethiopia, Software Engineer in Ethiopia, Senior Software Engineer Addis Ababa, Fullstack Web Developer, Backend Engineer Ethiopia, Mobile App Developer Ethiopia, AI Engineer Ethiopia.
-- **Specializations**: Next.js Developer, React Developer, TypeScript Specialist, Python FastAPI Backend, Spring Boot Java, PostgreSQL Database Optimization, Chapa Payment Gateway Integration, Telebirr API Integration, Stripe Developer, Playwright QA Automation, Docker DevOps, Hybrid Vector Search & RAG.
-- **Hiring & Market Queries**: Hire Software Engineer in Ethiopia, Top Fullstack Developer in Ethiopia, Remote Software Developer US UK EU Dubai, Ethiopian Software Consultant, AllCan Tech Instructor & Developer.
+- **Role Keywords**: Full-Stack Developer, AI Developer, AI Engineer, Machine Learning Engineer, ML Engineer, ML Developer, RAG System Developer, Fullstack Developer in Ethiopia, Software Engineer in Ethiopia, Senior Software Engineer Addis Ababa, Fullstack Web Developer, Backend Engineer Ethiopia, Mobile App Developer Ethiopia, AI Engineer Ethiopia, AI Developer Ethiopia, ML Engineer Ethiopia.
+- **Specializations**: AI Development, Machine Learning (ML), RAG Systems, Retrieval-Augmented Generation (RAG), LLM Application Engineering, Next.js Developer, React Developer, TypeScript Specialist, Python FastAPI Backend, Spring Boot Java, PostgreSQL Database Optimization, Chapa Payment Gateway Integration, Telebirr API Integration, Stripe Developer, Playwright QA Automation, Docker DevOps, Hybrid Vector Search & RAG.
+- **Hiring & Market Queries**: Hire AI Developer, Hire AI Engineer in Ethiopia, Hire ML Engineer, Hire Software Engineer in Ethiopia, Top Fullstack Developer in Ethiopia, RAG System Engineer for Hire, Remote AI Developer US UK EU Dubai, Ethiopian Software Consultant, AllCan Tech Instructor & Developer.
 
 ## Executive Summary
-Getabalew Kemaw is an Addis Ababa-based Full-Stack Software Engineer, Instructor at AllCan Tech, and builder specializing in production web applications, distributed backend architectures, test automation, and applied AI systems. He works with startups, agencies, and founders worldwide across US, UK, EU, and Dubai timezones, and is open to remote roles worldwide as well as relocation.
+Getabalew Kemaw is an Addis Ababa-based Full-Stack Software Engineer, AI Developer, ML Engineer, Instructor at AllCan Tech, and builder specializing in production web applications, distributed backend architectures, test automation, Machine Learning (ML), and applied RAG systems. He works with startups, agencies, and founders worldwide across US, UK, EU, and Dubai timezones, and is open to remote roles worldwide as well as relocation.
 
 ## Technical Stack & Competencies
 - **Frontend**: Next.js (App Router, Turbopack, SSR, SSG, PPR), React, TypeScript, Tailwind CSS, Vanilla CSS design tokens, Web Audio API, View Transitions API, WCAG accessibility standards.
@@ -17,7 +17,7 @@ Getabalew Kemaw is an Addis Ababa-based Full-Stack Software Engineer, Instructor
 - **Databases & Caching**: PostgreSQL (indexing strategies, EXPLAIN query optimization, table partitioning, pgvector), Redis (caching layers, atomic increments, memory buffers), Apache Kafka.
 - **QA & Testing**: Playwright (cross-browser E2E testing, visual regression, network mocking), Jest, React Testing Library, Cypress, unit & integration test coverage.
 - **DevOps & Cloud**: Docker (multi-stage minimal builds), Kubernetes, Nginx (reverse proxy, SSL termination, rate limiting), Linux system administration, GitHub Actions CI/CD pipelines, AWS, Google Cloud Platform (GCP).
-- **AI & Retrieval**: Retrieval-Augmented Generation (RAG), PostgreSQL pgvector, OpenAI / HuggingFace embeddings, hybrid lexical/vector search, contextual chunking, prompt engineering.
+- **AI, Machine Learning (ML) & RAG Systems**: Retrieval-Augmented Generation (RAG), PostgreSQL pgvector, OpenAI / Anthropic Claude / Google Gemini / HuggingFace embeddings, hybrid lexical/vector search, contextual chunking, prompt engineering, agentic workflows, LLM orchestration.
 
 ## Architectural Principles & Philosophy
 1. **Sensible Architecture Over Trendy Tooling**: Optimize what works. Avoid unnecessary microservices, premature distributed clusters, and over-engineered tech stacks that inflate server bills.

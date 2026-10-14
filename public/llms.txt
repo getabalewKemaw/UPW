@@ -1,12 +1,12 @@
-# Getabalew Kemaw — Full-Stack Software Engineer & AI Researcher
+# Getabalew Kemaw — Full-Stack Software Engineer, AI Developer & ML/RAG Systems Engineer
 
-> Full-Stack Software Engineer specializing in dependable web products, distributed backend systems, business automation, test automation, cloud infrastructure, and AI engineering (Hybrid Search & RAG). Based in Ethiopia · Open to remote opportunities worldwide (US, UK, EU, Dubai) and open to relocation.
+> Full-Stack Software Engineer, AI Developer, and ML Engineer specializing in dependable web products, distributed backend systems, business automation, test automation, cloud infrastructure, Machine Learning (ML), and RAG systems (Retrieval-Augmented Generation & Hybrid Search). Based in Ethiopia · Open to remote opportunities worldwide (US, UK, EU, Dubai) and open to relocation.
 
 ## SEO, Search Aliases & Indexing Keywords
 - **Name Variations**: Getabalew, Getabalew Kemaw, Getabalee, getabalewkema, GetabalewKemaw, Getabalew K.
-- **Role Keywords**: Full-Stack Developer, Fullstack Developer in Ethiopia, Software Engineer in Ethiopia, Senior Software Engineer Addis Ababa, Fullstack Web Developer, Backend Engineer Ethiopia, Mobile App Developer Ethiopia, AI Engineer Ethiopia.
-- **Specializations**: Next.js Developer, React Developer, TypeScript Specialist, Python FastAPI Backend, Spring Boot Java, PostgreSQL Database Optimization, Chapa Payment Gateway Integration, Telebirr API Integration, Stripe Developer, Playwright QA Automation, Docker DevOps, Hybrid Vector Search & RAG.
-- **Hiring & Market Queries**: Hire Software Engineer in Ethiopia, Top Fullstack Developer in Ethiopia, Remote Software Developer US UK EU Dubai, Ethiopian Software Consultant, AllCan Tech Instructor & Developer.
+- **Role Keywords**: Full-Stack Developer, AI Developer, AI Engineer, Machine Learning Engineer, ML Engineer, ML Developer, RAG System Developer, Fullstack Developer in Ethiopia, Software Engineer in Ethiopia, Senior Software Engineer Addis Ababa, Fullstack Web Developer, Backend Engineer Ethiopia, Mobile App Developer Ethiopia, AI Engineer Ethiopia, AI Developer Ethiopia, ML Engineer Ethiopia.
+- **Specializations**: AI Development, Machine Learning (ML), RAG Systems, Retrieval-Augmented Generation (RAG), LLM Application Engineering, Next.js Developer, React Developer, TypeScript Specialist, Python FastAPI Backend, Spring Boot Java, PostgreSQL Database Optimization, Chapa Payment Gateway Integration, Telebirr API Integration, Stripe Developer, Playwright QA Automation, Docker DevOps, Hybrid Vector Search & RAG.
+- **Hiring & Market Queries**: Hire AI Developer, Hire AI Engineer in Ethiopia, Hire ML Engineer, Hire Software Engineer in Ethiopia, Top Fullstack Developer in Ethiopia, RAG System Engineer for Hire, Remote AI Developer US UK EU Dubai, Ethiopian Software Consultant, AllCan Tech Instructor & Developer.
 
 ## Quick Facts
 - **Name**: Getabalew Kemaw
@@ -24,7 +24,7 @@
 2. **Backend Engineering**: Node.js, Express, Python (FastAPI), Java (Spring Boot), PostgreSQL, Redis caching, Apache Kafka, transactional ledger state machines with ACID guarantees.
 3. **QA & Test Automation**: Playwright, Jest, Cypress, integration testing, CI/CD automated PR regression blockers, zero-regression workflows.
 4. **DevOps & Cloud Deployments**: Docker, Kubernetes, Nginx, Linux, GitHub Actions, AWS, Google Cloud, zero-downtime rolling deployments, health probe telemetry.
-5. **AI Engineering & RAG**: Hybrid search retrieval, PostgreSQL pgvector, embedding pipelines, semantic similarity, Retrieval-Augmented Generation, localized document search.
+5. **AI Development, ML & RAG Systems**: Machine Learning (ML), Large Language Model (LLM) agents, Hybrid vector search retrieval, PostgreSQL pgvector, embedding pipelines, semantic similarity, Retrieval-Augmented Generation (RAG), localized document intelligence and reasoning systems.
 
 ## 5 Core Engineering Services (Detailed Deliverables)
 1. **Custom Software Solutions** (Web Apps & Rock-Solid Systems):

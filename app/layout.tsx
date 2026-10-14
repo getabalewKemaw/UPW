@@ -11,8 +11,8 @@ const lexend = Lexend({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://getabalewkemaw.dev"),
-  title: "Getabalew Kemaw · Fullstack Software Engineer",
-  description: "Fullstack software engineer specializing in AI-integrated platforms, RAG systems, and distributed web applications.",
+  title: "Getabalew Kemaw · Fullstack Software Engineer & AI Developer",
+  description: "Fullstack software engineer, AI developer, and ML engineer specializing in RAG systems, intelligent automation, and distributed web applications.",
   keywords: [
     "Getabalew",
     "Getabalew Kemaw",
@@ -26,13 +26,25 @@ export const metadata: Metadata = {
     "Backend Engineer Ethiopia",
     "Next.js Developer Ethiopia",
     "React Developer Ethiopia",
+    "AI Developer",
+    "AI Engineer",
+    "AI Developer Ethiopia",
+    "AI Engineer Ethiopia",
+    "Machine Learning",
+    "Machine Learning Engineer",
+    "ML",
+    "ML Engineer Ethiopia",
+    "RAG System",
+    "RAG Systems",
+    "Retrieval-Augmented Generation",
+    "RAG Developer",
     "Chapa Payment Gateway",
     "Telebirr API Integration",
     "Python FastAPI Developer",
     "PostgreSQL Optimization",
-    "AI & RAG Engineer Ethiopia",
     "AllCan Tech",
     "Hire Developer in Ethiopia",
+    "Hire AI Developer",
   ],
   icons: {
     icon: [

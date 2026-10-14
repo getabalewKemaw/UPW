@@ -45,7 +45,8 @@ export const TOPIC_CHIPS: TopicChipItem[] = [
   { id: "backend", label: "Backend Engineering" },
   { id: "qa", label: "QA & Test Automation" },
   { id: "devops", label: "DevOps & Deployment" },
-  { id: "ai", label: "AI Engineering" },
+  { id: "ai", label: "AI & ML Engineering" },
+  { id: "rag", label: "RAG Systems" },
 ];
 
 export const FEATURED_PROJECTS: ProjectCaseStudy[] = [
