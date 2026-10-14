@@ -81,7 +81,7 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [propActiveId, isServicesPage]);
+  }, [propActiveId, isSubPage]);
 
   const handleLinkClick = (id: string) => {
     try {

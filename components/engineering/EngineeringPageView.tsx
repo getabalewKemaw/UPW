@@ -157,7 +157,7 @@ export function EngineeringPageView() {
         </div>
 
         <p className="text-xl sm:text-2xl md:text-[26px] lg:text-[28px] font-light text-theme-narrative leading-relaxed w-full">
-          I optimize using what actually works and choose the right decision for your project. I don't use tools just because I can, and I don't force unnecessary complexity onto your company. Every decision starts with how your business works and what will make it fast, reliable, and affordable to maintain.
+          I optimize using what actually works and choose the right decision for your project. I don&apos;t use tools just because I can, and I don&apos;t force unnecessary complexity onto your company. Every decision starts with how your business works and what will make it fast, reliable, and affordable to maintain.
         </p>
 
         {/* 3 Core Human Principles (Generous, highly readable font sizes) */}
@@ -170,7 +170,7 @@ export function EngineeringPageView() {
               No generic theory
             </h3>
             <p className="text-lg sm:text-xl md:text-[22px] font-light text-theme-narrative leading-relaxed">
-              I don't design software for hypothetical scenarios. I look at how your business actually operates and build clean systems that solve your real problems.
+              I don&apos;t design software for hypothetical scenarios. I look at how your business actually operates and build clean systems that solve your real problems.
             </p>
           </div>
 
@@ -182,7 +182,7 @@ export function EngineeringPageView() {
               Optimize what exists
             </h3>
             <p className="text-lg sm:text-xl md:text-[22px] font-light text-theme-narrative leading-relaxed">
-              Most slow apps don't need expensive new servers—they just need proper database indexes and caching. I optimize what's already there to save you money.
+              Most slow apps don&apos;t need expensive new servers—they just need proper database indexes and caching. I optimize what&apos;s already there to save you money.
             </p>
           </div>
 
@@ -300,7 +300,7 @@ export function EngineeringPageView() {
       <div className="w-full flex flex-wrap items-center justify-between gap-6 pt-12 sm:pt-16 border-t border-theme/20">
         <div className="flex flex-col gap-2 max-w-2xl text-left">
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-theme-primary tracking-tight">
-            Want to build software that's fast, simple, and reliable?
+            Want to build software that&apos;s fast, simple, and reliable?
           </h3>
           <p className="text-lg sm:text-xl md:text-[22px] font-light text-theme-narrative leading-relaxed">
             I help startups and founders build dependable backends, automated test suites, and clean deployments without bloated complexity.

@@ -7,13 +7,11 @@ import {
   Download,
   Check,
   Send,
-  ExternalLink,
-  Copy,
   Sparkles,
 } from "lucide-react";
 import { SocialMentions } from "@/components/profile/SocialMentions";
 import { LiveStatusBadge } from "@/components/profile/LiveStatusBadge";
-import { CONTACT_EMAIL, RESUME_URL, SOCIAL_LINKS } from "@/data/portfolio-data";
+import { CONTACT_EMAIL, RESUME_URL } from "@/data/portfolio-data";
 import { sound } from "@/utils/sound";
 
 export function AboutPageView() {

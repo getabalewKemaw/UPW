@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Download, Check, Sparkles } from "lucide-react";
+import { Download, Check } from "lucide-react";
 import { CONTACT_EMAIL, RESUME_URL } from "@/data/portfolio-data";
 import { sound } from "@/utils/sound";
 

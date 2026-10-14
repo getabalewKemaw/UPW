@@ -90,7 +90,7 @@ export function ServiceDeliveryProcess() {
     setActiveStepIndex(index);
   };
 
-  const handleScrollToBooking = (tierId: string) => {
+  const handleScrollToBooking = () => {
     sound.playClick();
     const el = document.getElementById("appointment-booking");
     if (el) {
@@ -269,7 +269,7 @@ export function ServiceDeliveryProcess() {
                   type="button"
                   onClick={(e) => {
                     e.stopPropagation();
-                    handleScrollToBooking(stepItem.tierId);
+                    handleScrollToBooking();
                   }}
                   className="w-full inline-flex items-center justify-between px-6 py-3.5 rounded-[5px] text-base sm:text-lg md:text-xl font-normal transition-all cursor-pointer bg-theme-btn-primary text-theme-btn-primary hover:opacity-90 active:scale-95 shadow-none"
                 >
@@ -293,7 +293,7 @@ export function ServiceDeliveryProcess() {
 
         <button
           type="button"
-          onClick={() => handleScrollToBooking("tier-consult")}
+          onClick={() => handleScrollToBooking()}
           className="inline-flex items-center gap-2 text-sm sm:text-base md:text-lg font-mono text-theme-primary hover:text-theme-primary/80 transition-colors cursor-pointer group"
         >
           <span>Jump to Direct Scheduling</span>

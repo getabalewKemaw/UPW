@@ -32,7 +32,6 @@ import {
   FaCreditCard,
   FaWaveSquare,
   FaRobot,
-  FaBrain,
   FaCode,
   FaBroadcastTower,
   FaAws,
