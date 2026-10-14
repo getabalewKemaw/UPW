@@ -83,13 +83,23 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [propActiveId, isSubPage]);
 
-  const handleLinkClick = (id: string) => {
+  const handleLinkClick = (e: React.MouseEvent, id: string, href?: string) => {
     try {
       sessionStorage.setItem("gk_preloader_seen", "true");
     } catch {}
     sound.playClick();
     setInternalActiveId(id);
     onSelect?.(id);
+
+    if (href && href.startsWith("#") && !isSubPage) {
+      e.preventDefault();
+      const targetId = href.replace("#", "");
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", href);
+      }
+    }
   };
 
   return (
@@ -141,7 +151,7 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
                 linkRefs.current[item.id] = el;
               }}
               href={item.href}
-              onClick={() => handleLinkClick(item.id)}
+              onClick={(e) => handleLinkClick(e, item.id, item.href)}
               onMouseEnter={() => setHoveredId(item.id)}
               className={className}
             >
@@ -161,7 +171,7 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
                 linkRefs.current[item.id] = el;
               }}
               href={effectiveHref}
-              onClick={() => handleLinkClick(item.id)}
+              onClick={(e) => handleLinkClick(e, item.id, effectiveHref)}
               onMouseEnter={() => setHoveredId(item.id)}
               className={className}
             >
@@ -177,7 +187,7 @@ export function NavLinks({ activeId: propActiveId, onSelect }: NavLinksProps) {
               linkRefs.current[item.id] = el;
             }}
             href={effectiveHref}
-            onClick={() => handleLinkClick(item.id)}
+            onClick={(e) => handleLinkClick(e, item.id, effectiveHref)}
             onMouseEnter={() => setHoveredId(item.id)}
             target={item.isExternal ? "_blank" : undefined}
             rel={item.isExternal ? "noopener noreferrer" : undefined}

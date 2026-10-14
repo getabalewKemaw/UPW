@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import Script from "next/script";
+import { HatchPerimeter } from "@/components/frame/HatchPerimeter";
 import "./globals.css";
 
 const lexend = Lexend({
@@ -99,7 +100,9 @@ export default function RootLayout({
             `,
           }}
         />
-        {children}
+        <HatchPerimeter>
+          {children}
+        </HatchPerimeter>
       </body>
     </html>
   );

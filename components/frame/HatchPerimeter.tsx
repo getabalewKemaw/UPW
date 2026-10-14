@@ -10,7 +10,7 @@ interface HatchPerimeterProps {
 
 export function HatchPerimeter({ children, showPreloader = true }: HatchPerimeterProps) {
   return (
-    <div className="relative min-h-screen w-full flex flex-col bg-theme-page text-theme-primary selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
+    <div className="relative min-h-screen w-full max-w-full flex flex-col bg-theme-page text-theme-primary overflow-x-hidden selection:bg-[var(--selection-bg)] selection:text-[var(--selection-text)]">
       {/* Tactile Micro-Point UI Click Sparks & Haptic Sound */}
       <ClickSpark />
 
@@ -30,15 +30,17 @@ export function HatchPerimeter({ children, showPreloader = true }: HatchPerimete
       />
 
       {/* 2. Middle Section: Left Hatch Band + Full-Width Body + Right Hatch Band */}
-      <div className="w-full flex-1 flex flex-row relative z-10">
+      <div className="w-full flex-1 flex flex-row relative z-10 min-w-0">
         {/* Sleek Left Vertical Multi-Color Hatch Band */}
         <div
           className="w-3.5 sm:w-4 border-r border-theme bg-theme-band shrink-0 animate-hatch-left theme-level-0"
           style={{ backgroundImage: "var(--hatch-gradient)" }}
         />
 
-        {/* Full-Width Centered Body Content */}
-        {children}
+        {/* Full-Width Centered Body Content strictly constrained */}
+        <div className="flex-1 min-w-0 flex flex-col overflow-x-hidden">
+          {children}
+        </div>
 
         {/* Sleek Right Vertical Multi-Color Hatch Band */}
         <div

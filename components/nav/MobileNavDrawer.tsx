@@ -96,13 +96,23 @@ export function MobileNavDrawer({
             : "text-theme-muted hover:text-theme-primary hover:bg-theme-btn-secondary-hover/70"
         }`;
 
-        const handleClick = () => {
+        const handleClick = (e: React.MouseEvent) => {
           try {
             sessionStorage.setItem("gk_preloader_seen", "true");
           } catch {}
           sound.playClick();
           onSelect(item.id);
           onClose();
+
+          if (item.href.startsWith("#") && !isSubPage) {
+            e.preventDefault();
+            const targetId = item.href.replace("#", "");
+            const el = document.getElementById(targetId);
+            if (el) {
+              el.scrollIntoView({ behavior: "smooth" });
+              window.history.pushState(null, "", item.href);
+            }
+          }
         };
 
         if (item.href.startsWith("/") || (isSubPage && item.href.startsWith("#"))) {

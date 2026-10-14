@@ -243,6 +243,13 @@ html.theme-transitioning .theme-level-6 {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 html.dark,

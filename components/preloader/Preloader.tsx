@@ -52,18 +52,18 @@ export function Preloader({ onComplete }: PreloaderProps) {
 
   // Client-only mount detection and sessionStorage check to ensure 100% SSR hydration match
   useEffect(() => {
-    const timer = setTimeout(() => {
-      try {
-        if (sessionStorage.getItem("gk_preloader_seen") === "true") {
-          setIsFinished(true);
-          return;
-        }
-      } catch {
-        // storage unavailable
+    try {
+      if (
+        sessionStorage.getItem("gk_preloader_seen") === "true" ||
+        window.location.pathname !== "/"
+      ) {
+        setIsFinished(true);
+        return;
       }
-      setMounted(true);
-    }, 0);
-    return () => clearTimeout(timer);
+    } catch {
+      // storage unavailable
+    }
+    setMounted(true);
   }, []);
 
   useEffect(() => {
