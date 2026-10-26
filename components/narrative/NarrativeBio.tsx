@@ -1,5 +1,3 @@
-import { InteractiveMention } from "@/components/mentions/InteractiveMention";
-import { ExternalLink } from "lucide-react";
 import { TopicChips } from "./TopicChips";
 
 export function NarrativeBio() {
@@ -12,14 +10,7 @@ export function NarrativeBio() {
       {/* Large, Generous Lexend Narrative matching the exact recruiter-friendly brief */}
       <div className="flex flex-col gap-6 text-xl sm:text-2xl md:text-[24px] lg:text-[27px] font-light text-theme-narrative leading-relaxed">
         <div className="leading-relaxed theme-level-3">
-          Currently working as a{" "}
-          <InteractiveMention
-            label="Full-Stack Instructor & Developer at AllCan Tech"
-            href="https://allcan.tech"
-            urlText="allcan.tech"
-            icon={<ExternalLink className="w-5 h-5 text-theme-primary" />}
-          />
-          , combining hands-on software engineering with mentoring developers in practical development and software delivery.
+          Full-Stack &amp; AI Software Engineer specialized in scalable production systems and modern web architecture, actively available for full-time engineering roles.
         </div>
 
         {/* What I bring: 5 Core Disciplines */}
